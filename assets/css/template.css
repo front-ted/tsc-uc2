@@ -29,6 +29,7 @@ body {
     /* background-attachment: fixed !important; */
     height: auto;
     overflow-x: hidden;
+    font-size: 18px;
 }
 
 .bg-fundo {
@@ -82,24 +83,24 @@ h2 {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: -30px;
-    font-size: 36px;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 1.8em;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 h4 {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.5em;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 h5 {
-    font-size: 17px;
+    font-size: 1.2em;
 }
 
 p,
@@ -108,7 +109,7 @@ th,
 td,
 a {
     font-family: figtree;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 b,
