@@ -1,60 +1,69 @@
 body{
-    background: rgb(147,172,206);
-    background: linear-gradient(180deg, rgba(147,172,206,1) 0%, rgba(0,122,149,1) 100%);
+    background: url('../img/bg.jpg') no-repeat;
+    background-attachment: fixed;
 }
-.pagina.container{
-    background: #fff;
-    padding: 50px 100px;
-}
-.img-fundo{position: relative;}
-.img-fundo img{
-    position: absolute;
-    width: 200px;
-}
-.aspectos-historicos .img-fundo img{
-    left: -260px;
-}
-.regulamentacao .img-fundo img{
-    right: -245px;
-}
-.codigo-etica .img-fundo img{
-    left: -260px;
-}
-.legislacao .img-fundo img{
-    right: -245px;
-}
-.lilian{ 
-    max-width: 80%;
-    margin: auto;
+.citacao{
+    padding-left: 200px;
+    font-size: 16px;
 }
 .bt-saibamais{
     background: url('../img/bt_saibamais.png') no-repeat;
-    width: 339px;
-    height: 372px;
+    width: 481px;
+    height: 324px;
     border: none;
     transition: all .4s;
 }
-.bt-saibamais:hover{background: url('../img/bt_saibamais_hv.png') no-repeat;}
-.bt-download{
-    background: url('../img/bt_download.png') no-repeat;
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 50px auto;
+.bt-saibamais:hover,
+.bt-lei:hover,
+.bt-cargos:hover{transform: scale(1.1);}
+.bt-lei{
+    background: url('../img/bt_lei.png') no-repeat;
+    width: 423px;
+    height: 289px;
+    border: none;
     transition: all .4s;
 }
-.bt-download:hover{transform: scale(1.1);}
-
-@media screen and (max-width: 1280px){
-    .img-fundo{display: none;}
+.livro{
+    position: relative;
+    margin-bottom: 180px;
 }
-@media screen and (max-width: 780px){
-    .pagina.container{
-        padding: 50px;
-    }    
-    .voltar-topo{
-        bottom: 10px;
-        left: 5px;
-        right: unset;
+.livro::after{
+    content: '';
+    display: block;
+    background: url(../img/destaque_citacao.png) no-repeat;
+    height: 211px;
+    width: 577px;
+    bottom: -162px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 2;
+}
+.bt-cargos{
+    background: url('../img/bt_cargos.png') no-repeat;
+    width: 454px;
+    height: 311px;
+    border: none;
+    transition: all .4s;
+}
+
+.bt-saibamais,
+.bt-lei,
+.bt-cargos{
+    width: 100%;
+    background-size: contain;
+}
+
+@media (max-width: 580px){
+    .livro::after{
+        width: 300px;
+        background-size: contain;
+        height: 110px;
+        bottom: -82px;
     }
+    .citacao{
+        padding-left: 100px;
+    }
+    .esquemaDaBru .alt-c, .esquemaDaBru .alt-e{width: 75%;}
 }

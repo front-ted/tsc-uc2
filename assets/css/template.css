@@ -15,23 +15,6 @@
     src: url("../fonts/Figtree-Bold.ttf");
 }
 
-/* background-image: radial-gradient(farthest-corner at -2% 25%, #92ACCE 5%, transparent 25%), radial-gradient(farthest-corner at 100% 100%, #E9ECEC 0%, transparent 60%), radial-gradient(farthest-corner at -2% 97%, #CF9993 0%, transparent 25%); */
-
-body {
-    background-image: url('../../01_experimentacao/img/textura.png');
-    background-image: radial-gradient(farthest-corner at -2% 25%, #92ACCE 0%, transparent 25%), 
-    radial-gradient(farthest-corner at 106% 114%, #002e3b 5%, transparent 25%), 
-    radial-gradient(farthest-corner at -2% 75%, #207893 0%, transparent 25%);
-    position: relative;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    /* background-attachment: fixed !important; */
-    height: auto;
-    overflow-x: hidden;
-    font-size: 18px;
-}
-
 .bg-fundo {
     width: 100%;
     height: 100%;
@@ -379,7 +362,7 @@ tbody td:first-child {
     border-radius: 30px;
 }
 
-.botao.visitado::after {
+.botao.check.visitado::after {
     background: url('../images/check.svg') no-repeat;
     height: 30px;
     width: 30px;
@@ -522,7 +505,7 @@ tbody td:first-child {
 
 .destaque {
     border-radius: 25px;
-    margin: 100px 0;
+    margin: 50px 0;
     padding: 40px;
     background: #fff;
     position: relative;
@@ -785,7 +768,7 @@ tbody td:first-child {
     position: fixed;
     left: 0;
     top: 150px;
-    z-index: 2;
+    z-index: 3;
     transition-duration: .2s;
 }
 

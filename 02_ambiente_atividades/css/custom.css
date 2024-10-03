@@ -1,0 +1,101 @@
+body{
+    background: url('../img/bg.jpg') no-repeat;
+    background-attachment: fixed;
+}
+.figura{max-width: 50%;}
+
+.painel1{
+    height: 340px;
+    width: 90%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(185,206,227,1) 100%);
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.painel1::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('../img/painel_bg.png') no-repeat;
+    width: 309px;
+    height: 207px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -100px;
+}
+.painel1 button{
+    width: 122px;
+    height: 133px;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    transition: all .4s;
+}
+.bt-utilizacao{
+    background: url('../img/1_bt.png') no-repeat;
+    left: 50px;
+}
+.bt-utilizacao:hover{background: url('../img/1_bt_hoover.png') no-repeat;}
+.bt-disciplina{
+    background: url('../img/5_bt.png') no-repeat;
+    right: 50px;
+}
+.bt-disciplina:hover{background: url('../img/5_bt_hoover.png') no-repeat;}
+.bt-limpeza{
+    background: url('../img/2_bt.png') no-repeat;
+    left: 200px;
+    top: 100px;
+}
+.bt-limpeza:hover{background: url('../img/2_bt_hoover.png') no-repeat;}
+.bt-padronizacao{
+    background: url('../img/4_bt.png') no-repeat;
+    right: 200px;
+    top: 100px;
+}
+.bt-padronizacao:hover{background: url('../img/4_bt_hoover.png') no-repeat;}
+.bt-organizacao{
+    background: url('../img/3_bt.png') no-repeat;
+    left: 340px;
+    top: 170px;
+}
+.bt-organizacao:hover{background: url('../img/3_bt_hoover.png') no-repeat;}
+
+.espera{
+    height: 300px;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    line-height: 250px;
+    margin: 50px auto;
+}
+
+@media (max-width: 1630px){
+    body{
+        background: url('../img/bg01_dir.png') no-repeat right top;
+        background-attachment: fixed;
+    }
+}
+@media (max-width: 980px){
+    .painel1{
+        position: relative;
+        padding: 40px;
+        padding-top: 120px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .painel1 button{
+        position: unset;
+        margin: 10px;
+    }
+
+}
+@media (max-width: 580px){
+    .figura{
+        max-width: 100%;
+        margin: 30px 0;
+    }
+}
