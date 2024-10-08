@@ -199,7 +199,11 @@ tbody td:first-child {
 .accordion-header {
     margin-top: 0;
 }
-
+.accordion h2{margin-left: unset;}
+.accordion .destaque, .modal .destaque{    
+    width: 90%;
+    margin: 30px auto;
+}
 .accordion-button,
 .accordion-button:not(.collapsed) {
     color: #fff;
@@ -993,6 +997,12 @@ tbody td:first-child {
     filter: drop-shadow(#000 4px 4px 5px);
 }
 
+.espera{
+    width: 100%;
+    background: #000;
+    color: #fff;
+    height: 300px;
+}
 
 @media screen and (max-width: 1530px) {
     .ilustracao-float {

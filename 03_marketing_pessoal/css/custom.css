@@ -1,0 +1,113 @@
+body{
+    background-image: url('../img/bg_esq.png'), url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll, fixed;
+    background-size: 15%, cover;
+    background-position: left top 600px, center;
+}
+
+/*FLIP CARDS*/
+.flip-card {
+    background-color: transparent;
+    width: 234px;
+    height: 423px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 20px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.modal.show .modal-xl .modal-body{
+    background: url('../img/bg_modal.png') no-repeat left bottom #fff;
+}
+
+.bt-linkedin{
+    background: url('../img/bt_linkedin.jpg') no-repeat center;
+    width: 900px;
+    height: 230px;
+    border:none;
+}
+.bt-linkedin:hover{background: url('../img/bg_linkedin_hover.jpg') no-repeat center;}
+
+.painel1 button{
+    width: 169px;
+    height: 194px;
+    border: none;
+    position: relative;
+}
+.bt-vestuario{
+    background: url('../img/bt1.png') no-repeat;
+}
+.bt-normas{
+    background: url('../img/bt2.png') no-repeat;
+}
+.bt-comunicacao{
+    background: url('../img/bt3.png') no-repeat;
+}
+.painel1 button:hover::before{
+    content: '';
+    width: 157px;
+    height: 156px;
+    background: url(../img/hover.png) no-repeat;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+.lista1, .lista2{
+    width: 330px;
+    padding: 20px;
+    position: relative;
+    margin-top: 100px;
+}
+.lista1::before{
+    content: '';
+    width: 122px;
+    height: 131px;
+    position: absolute;
+    top: -120px;
+    left: -40px;
+    background: url('../img/dica_esq.png') no-repeat;
+}
+.lista2::before{
+    content: '';
+    width: 122px;
+    height: 131px;
+    position: absolute;
+    top: -120px;
+    right: -40px;
+    background: url('../img/dicas_dir.png') no-repeat;
+}
+
+@media (max-width: 1240px){
+    body{
+        background-image: url('../img/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 980px){
+    .bt-linkedin{width: 100%;}
+}
