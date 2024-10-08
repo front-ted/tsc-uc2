@@ -1,0 +1,40 @@
+body{
+    background-image: url('../img/bg_esq2.png'), url('../img/bg_dir.png'), url('../img/bg_esq.png'), url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-size: 15%, 15%, 15%, cover;
+    background-position: left center, right bottom, left top 100px, center;
+}
+
+.painel1 button{
+    width: 168px;
+    height: 194px;
+    margin: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+.bt-fisica{background-image: url('../img/bt1.png');}
+.bt-fisica:hover{background-image: url('../img/bt1.png');}
+.bt-virtual{background-image: url('../img/bt2.png');}
+
+.painel1 button:hover::before{
+    content: '';
+    width: 157px;
+    height: 156px;
+    background: url(../img/hover.png) no-repeat;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+@media (max-width: 1380px){
+    body{
+        background-image: url('../img/bg.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media (max-width: 780px){
+    .img1, .img2{max-width: 100%;}
+}
