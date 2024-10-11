@@ -1,0 +1,71 @@
+body {
+    background-image: url(../img/bg02_esq.png), url(../img/bg01_dir.png), url(../img/bg_centro.png), linear-gradient(45deg, #FFFFFF, #92ACCE);
+    background-repeat: no-repeat;
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-size: 15%, 15%, contain, cover;
+    background-position: left bottom, right top, center, center;
+}
+
+.borda {
+    border-radius: 20px;
+}
+
+.painel1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt-painel1 {
+    width: 168px;
+    height: 198px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.bt1-painel1 {
+    background: url(../img/bt1.png) no-repeat;
+}
+
+.bt2-painel1 {
+    background: url(../img/bt2.png) no-repeat;
+}
+
+.bt3-painel1 {
+    background: url(../img/bt7.png) no-repeat;
+}
+
+.bt4-painel1 {
+    background: url(../img/bt4.png) no-repeat;
+}
+
+.bt5-painel1 {
+    background: url(../img/bt5.png) no-repeat;
+}
+
+.bt6-painel1 {
+    background: url(../img/bt8.png) no-repeat;
+}
+
+.bt7-painel1 {
+    background: url(../img/bt3.png) no-repeat;
+}
+
+.bt-painel1:hover::before {
+    content: '';
+    width: 157px;
+    height: 156px;
+    background: url(../img/hover.png) no-repeat;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+@media (max-width: 580px) {}
