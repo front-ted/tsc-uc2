@@ -959,11 +959,12 @@ tbody td:first-child {
     background-image: url('../images/elemento_dir.png'), url('../images/elemento_esq.png');
     background-size: 10%;
     background-repeat: no-repeat;
-    background-position: right top, left top 80px;
+    background-position: right top, left bottom;
 }
 .referencias h2, .referencias h3, .referencias h4{
     font-family: italiana;
 }
+.referencias *{word-wrap: break-word;}
 
 @media screen and (max-width: 1530px) {
     .ilustracao-float {
