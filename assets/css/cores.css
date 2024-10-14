@@ -96,7 +96,7 @@
 thead, .accordion-button, .accordion-button:not(.collapsed){background-color: var(--cor-primaria);}
 
 td{
-	border-left-color: #fff;
+	border-left-color: transparent;
 	border-bottom-color: var(--cor-primaria);
 }
 .page-link{color: var(--cor-primaria)}

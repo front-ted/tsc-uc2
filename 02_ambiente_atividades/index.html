@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="css/custom.css">
     
     </head>
-    <body>
+    <body class="bg-claro">
         <!-- Preloader OBRIGATÓRIO -->
         <div class="preloader">
             <div class="anim"></div>
@@ -41,12 +41,14 @@
         <header id="topo">
             <div class="topo-logo">
                 <div class="container">
-                    <h1 id="nome-curso" class="only-print">Técnico em Secretariado</h1>    
+                    <h1 id="nome-curso" class="only-print">Técnico em Secretariado</h1>   
+                    <div id="toggleButton" class="btn-tema_pagina no-print" onclick="toggleBackgroundImage()" aria-hidden="true"></div>   
                 </div>
             </div>
         </header>
         <!-- Section principal #booklet OBRIGATÓRIO para funcionamento do print -->    
         <section id="booklet">
+            <div class="layer-preta no-print"></div>   
             <!-- Section .paginas OBRIGATÓRIA para funcionamento da paginação e do print -->
             <section class="paginas">
                 <div class="pagina container">
@@ -315,6 +317,7 @@
                             <p><b>Pare e reflita</b>: é mais interessante que se lembrem de você como uma pessoa organizada ou desorganizada? </p>
                         </div>
                     </div>
+                    <a href="#" class="voltar-topo no-print" aria-hidden="true"><img src="../assets/images/bt_topo.svg"></a>
                 </div>   
             </section>
             <!-- Paginação-->

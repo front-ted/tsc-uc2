@@ -119,14 +119,14 @@ p {
 
 /*footer*/
 .voltar-topo {
-    background: url('../../assets/bt_topo.svg');
+    background: url(../../assets/bt_topo.svg);
     width: 42px;
     height: 42px;
     display: block;
     position: fixed;
     bottom: 50px;
     right: 50px;
-    z-index: 900;
+    z-index: 2;
 }
 
 .voltar-topo:hover {
@@ -556,7 +556,7 @@ tbody td:first-child {
     margin-bottom: 0;
 }
 
-.destaque.gradiente p {
+.destaque.gradiente p, .destaque.gradiente li {
     color: #fff;
 }
 
@@ -853,7 +853,7 @@ tbody td:first-child {
     border: 1px solid var(--cor-primaria);
 }
 
-/* Modo alto contraste preto */
+/*MODO ESCURO*/
 .layer-preta {
     width: 100%;
     height: 100%;
@@ -863,11 +863,10 @@ tbody td:first-child {
     left: 0px;
     background-color: rgb(0, 0, 0);
     opacity: 0.85;
-    transition: all 0.8s ease 0s;
 }
 
 .top60 .layer-preta {
-    top: 80px;
+    top: 60px;
 }
 
 .top00 .layer-preta {
@@ -881,23 +880,17 @@ tbody td:first-child {
 .bg-escuro p,
 .bg-escuro li,
 .bg-escuro figcaption,
-.bg-escuro p.enunciado,
-.tab-content {
+.bg-escuro .tab-content,
+.bg-escuro .modal-body * {
+    color: #fff;
+}
+.bg-escuro .destaque *,
+.bg-escuro .box-atividade p,
+.bg-escuro .tab-pane *{
     color: #000;
 }
+.bg-escuro .destaque.gradiente *{color: #fff;}
 
-.bg-escuro .accordion-button:not(.collapsed) {}
-
-.bg-escuro .destaque p {
-    color: #000 !important;
-}
-
-/* .bg-escuro .accordion-item:first-of-type .accordion-button,
-.bg-escuro .modal {
-    background: black;
-} */
-
-.bg-escuro .modal-body,
 .bg-escuro td {
     background: #333;
     color: #fff
@@ -907,13 +900,9 @@ tbody td:first-child {
     background-color: #fff
 }
 
-.bg-escuro .destaque,
 .bg-escuro .accordion-button {
     color: #000;
 }
-
-
-/* .bg-escuro .destaque p{ color: black; } */
 
 .bg-escuro .container {
     background: transparent;
@@ -926,26 +915,6 @@ tbody td:first-child {
 .bg-escuro .video-youtube {
     filter: drop-shadow(#000 4px 4px 5px);
 }
-
-/* Modo alto contraste preto */
-/* .btn-tema_pagina {
-    width: 90px;
-    height: 26px;
-    position: fixed;
-    z-index: 900;
-    border-radius: 5px;
-    right: 50px;
-    bottom: 110px;
-    box-shadow: 4px 4px 0px rgba(187, 187, 187, 0.8);
-    cursor: pointer;
-    transition: all 0.4s;
-    background: url(../imgAjuste/versionamento/dia-e-noite.png) no-repeat, linear-gradient(90deg, #fce797 47%, #474747 47%);
-    background-position: center;
-    background-size: 100%;
-    font-size: 13px;
-    text-align: center;
-    line-height: 26px;
-} */
 
 .btn-tema_pagina {
     width: 42px;
@@ -962,7 +931,6 @@ tbody td:first-child {
     display: block;
 }
 
-
 .btn-tema_pagina span {
     color: #fff;
 }
@@ -970,32 +938,9 @@ tbody td:first-child {
 .btn-tema_pagina:hover {
     transform: scale(1.1);
 }
+.bg-escuro .game-associar-colunas p{color: #000;}
 
-.bg-escuro h2,
-.bg-escuro h3,
-.bg-escuro h4,
-.bg-escuro h5,
-.bg-escuro p,
-.bg-escuro figcaption,
-.bg-escuro p.enunciado {
-    color: #fff;
-}
-
-.bg-escuro li{
-    color: #000;
-}
-
-.bg-escuro .container {
-    background: transparent;
-}
-
-.bg-escuro .layer-preta {
-    display: block;
-}
-
-.bg-escuro .video-youtube {
-    filter: drop-shadow(#000 4px 4px 5px);
-}
+/*MODO ESCURO*/
 
 .espera{
     width: 100%;
@@ -1082,6 +1027,15 @@ tbody td:first-child {
 
     .grafismo::after {
         scale: 0.75;
+    }
+
+    .btn-tema_pagina, .voltar-topo {
+        right: unset;
+        left: 10px;
+    }
+    .voltar-topo{bottom: 10px;}
+    .btn-tema_pagina {
+        bottom: 55px;
     }
 }
 

@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="css/custom.css">
     
     </head>
-    <body>
+    <body class="bg-claro">
         <!-- Preloader OBRIGATÓRIO -->
         <div class="preloader">
             <div class="anim"></div>
@@ -43,12 +43,14 @@
         <header id="topo">
             <div class="topo-logo">
                 <div class="container">
-                    <h1 id="nome-curso" class="only-print">Técnico em Secretariado</h1>    
+                    <h1 id="nome-curso" class="only-print">Técnico em Secretariado</h1> 
+                    <div id="toggleButton" class="btn-tema_pagina no-print" onclick="toggleBackgroundImage()" aria-hidden="true"></div>     
                 </div>
             </div>
         </header>
         <!-- Section principal #booklet OBRIGATÓRIO para funcionamento do print -->    
         <section id="booklet">
+            <div class="layer-preta no-print"></div> 
             <!-- Section .paginas OBRIGATÓRIA para funcionamento da paginação e do print -->
             <section class="paginas">
                 <div class="pagina container">
@@ -534,6 +536,7 @@
                     <p class="paragrafo-destaque">Sempre considere, em sua trajetória profissional, o contexto e as escolhas sugeridas. Isso serve tanto para novas tecnologias quanto para apresentação pessoal, comunicação, postura etc.</p>
                     <p>Portanto, conforme destacam Kubica e Carvalho (2014, p. 93), para cumprir uma tarefa ou auxiliar no desenvolvimento de um projeto, é importante planejar e organizar as etapas, com registro do processo de execução. Para o autor, reforçando a importância da manutenção da agenda, seja física, seja virtual, uma forma simples de organizar as tarefas é anotar tudo que tem de ser feito exatamente em uma agenda.  </p>
                     <p>Para facilitar o processo e assegurar o registro das informações, descreva todas as tarefas (Kubica; Carvalho, 2014, p. 93) que precisam ser realizadas ao longo do tempo (dia, semana, mês, semestre, ano etc.) e, em seguida, coloque-as em uma lista de prioridades. Conforme for concluindo as demandas, sinalize e prossiga organizando melhor as tarefas e otimizando o tempo. </p>
+                    <a href="#" class="voltar-topo no-print" aria-hidden="true"><img src="../assets/images/bt_topo.svg"></a>
                 </div>   
 
             </section>

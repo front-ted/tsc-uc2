@@ -1,0 +1,136 @@
+body{
+    background-image: url('../img/bg_dir.png'), url('../img/bg_esq.png'), url('../img/gradiente.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 15%, 15%, cover;
+    background-position: right bottom, left top, bottom center;
+}
+
+.img1{
+    margin-top: -200px;
+}
+
+.caixa-container {
+    position: relative;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 60px !important;
+    border-width: 3px;
+  }
+  
+  .caixa-exp {
+    max-height: 60px;
+    overflow: hidden;
+    width: 100%;
+    margin: 40px auto;
+    transition-duration: .7s;
+    position: relative;
+    border: none;
+  
+  }
+  
+  .caixa-exp.aberta {
+    max-height: 1900px;
+  }
+  
+  .caixa-exp figure {
+    margin-top: 40px;
+  }
+  
+  .caixa-container button.btpluscaixa {
+    content: '';
+    background-image: url('../img/mais.png');
+    background-size: contain;
+    background-position: center;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .caixa-container button.btpluscaixa:hover {
+    transform: translateX(-50%) scale(1.03);
+  }
+
+.caixa-container::before{
+  content: '';
+  width: 66px;
+  height: 54px;
+  display: block;
+  position: absolute;
+  background: url('../img/elemento1.png') no-repeat;
+  right: -20px;
+  top: -20px;
+}
+.citacao{
+  padding-left: 200px;
+}
+.citacao p{font-size: 16px;}
+.bt-download{
+  background: url('../img/bt_pdf.png') no-repeat;
+  width: 171px;
+  height: 130px;
+  transition: all .4s;
+}
+.bt-download:hover{transform: scale(1.1);}
+.destaque-imagem{
+  max-width: 715px;
+  margin: 70px auto;
+  position: relative;
+}
+.destaque-imagem img{
+  margin-bottom: -120px;
+}
+.destaque-imagem p{padding: 0 30px;}
+.destaque-imagem::before{
+  content: '';
+  display: block;
+  position: absolute;
+  background: url('../img/elemento4.png') no-repeat;
+  width: 140px;
+  height: 141px;
+  right: -50px;
+  top: -50px;
+}
+.img-lista{
+  position: relative;
+  z-index: 2;
+}
+.img-lista img{
+  position: relative;
+  z-index: 2;
+}
+.img-lista::before{
+  content: '';
+  display: block;
+  background: url('../img/elemento2.png') no-repeat;
+  width: 151px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  top: -20px;
+  right: 50px;
+}
+.img-lista::after{
+  content: '';
+  display: block;
+  background: url('../img/elemnto3.png') no-repeat;
+  width: 151px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  bottom: -30px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+@media (max-width: 780px){
+  .citacao{padding-left: 50px;}
+  .destaque-imagem::before{display: none;}
+}
