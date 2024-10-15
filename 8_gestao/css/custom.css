@@ -1,5 +1,13 @@
-.bloco1 {
+.bloco1,
+.bloco3 {
     background-image: linear-gradient(45deg, #FFFFFF, #91D6E2);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bloco2 {
+    background-image: linear-gradient(45deg, #FFFFFF, #FFFFFF);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -23,4 +31,212 @@
     margin-bottom: 30px;
 }
 
-@media (max-width: 580px) {}
+/* INICIO PAINEL 1 */
+.painel1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: url(../img/painel1.png) no-repeat center;
+    width: 735px;
+    height: 610px;
+    border: none;
+}
+
+.bt-painel1 {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    position: relative;
+}
+
+.bt1-painel1 {
+    top: 71px;
+    right: -625px;
+}
+
+.bt2-painel1 {
+    top: 159px;
+    right: -573px;
+}
+
+.bt3-painel1 {
+    top: 245px;
+    right: -521px;
+}
+
+.bt4-painel1 {
+    top: 338px;
+    right: -467px;
+}
+
+.bt5-painel1 {
+    top: 435px;
+    right: -410px;
+}
+
+.bt-painel1:hover {
+    background: url(../img/hoove.png) no-repeat center;
+}
+
+.bt-painel1.visto {
+    background: url(../img/hoove.png) no-repeat center;
+}
+
+/* FIM PAINEL 1 */
+/* INICIO PAINEL 2 */
+.painel2 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background: url(../img/painel2.png) no-repeat center;
+    width: 377px;
+    height: 600px;
+}
+
+.bt-painel2 {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.bt-painel2:hover::before {
+    content: '';
+    width: 157px;
+    height: 156px;
+    background: url(../img/hover.png) no-repeat;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+.bt1-painel2 {
+    background: url(../img/painel2_bt1.png) no-repeat center;
+    height: 161px;
+    width: 231px;
+    top: 50px;
+    right: 160px;
+}
+
+.bt2-painel2 {
+    background: url(../img/painel2_bt2.png) no-repeat center;
+    height: 199px;
+    width: 205px;
+    top: -162px;
+    right: -79px;
+}
+
+.bt3-painel2 {
+    background: url(../img/painel2_bt3.png) no-repeat center;
+    height: 125px;
+    width: 200px;
+    top: -290px;
+    right: -300px;
+}
+
+.bt4-painel2 {
+    background: url(../img/painel2_bt4.png) no-repeat center;
+    height: 143px;
+    width: 220px;
+    top: -113px;
+    right: 110px;
+}
+
+.bt5-painel2 {
+    background: url(../img/painel2_bt5.png) no-repeat center;
+    height: 231px;
+    width: 251px;
+    top: -320px;
+    right: -190px;
+}
+
+/* FIM PAINEL 2 */
+/* INICIO PAINEL 3 */
+.painel3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.bt-painel3 {
+    width: 100%;
+    height: 158px;
+    border: none;
+    background-color: transparent;
+    transition: all 1s ease 0s;
+}
+
+.bt1-painel3 {
+    background: url(../img/esquema1.png) no-repeat center;
+}
+
+.bt1-painel3:hover {
+    transform: scale(1.1);
+}
+
+/* FIM PAINEL 3 */
+@media (max-width: 768px) {
+    .carousel-control-next {
+        right: -35px;
+    }
+
+    .carousel-control-prev {
+        left: -35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .painel1 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background: url(../img/painel1_mobile.png) no-repeat center;
+        width: 350px;
+        height: 291px;
+        border: none;
+    }
+
+    .bt-painel1 {
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .bt1-painel1 {
+        top: 33px;
+        right: -297px;
+    }
+
+    .bt2-painel1 {
+        top: 75px;
+        right: -269px;
+    }
+
+    .bt3-painel1 {
+        top: 116px;
+        right: -241px;
+    }
+
+    .bt4-painel1 {
+        top: 161px;
+        right: -212px;
+    }
+
+    .bt5-painel1 {
+        top: 207px;
+        right: -180px;
+    }
+
+    .bt-painel1:hover {
+        background: url(../img/hoove_mobile.png) no-repeat center;
+    }
+
+    .bt-painel1.visto {
+        background: url(../img/hoove_mobile.png) no-repeat center;
+    }
+
+    .painel2 {
+        margin-top: -100px;
+        margin-bottom: -100px;
+        scale: 0.6;
+    }
+}
