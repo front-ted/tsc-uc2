@@ -282,6 +282,34 @@ th{
   border-color: inherit;
 }
 
+/* código para tabela não desconfigurar na versão impressa */
+table.text-left.align-middle {
+  width: 80% !important;
+  border-collapse: collapse !important;
+  margin-bottom: 10px !important;
+  margin: auto !important;
+}
+
+table.text-left.align-middle th {
+  border: 1px solid black !important;
+  padding: 8px !important;
+  text-align: left !important;
+  width: 50% !important;
+  display: table-cell !important;
+  font-weight: bold !important;
+}
+
+table.text-left.align-middle td {
+  border: 1px solid black !important;
+  padding: 8px !important;
+  text-align: left !important;
+  width: 50% !important;
+}
+.figure-caption{
+  margin-top: 10px;
+}
+/* código para tabela não desconfigurar na versão impressa */
+
 /* Estilos de acordo com o template + ou - */
 .img-fluid{
   max-width: 100%;
