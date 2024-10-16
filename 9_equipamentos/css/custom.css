@@ -1,9 +1,9 @@
 body {
-    background-image: url(../img/bg02_esq.png), url(../img/bg01_dir.png), url(../img/bg_centro.png), linear-gradient(45deg, #FFFFFF, #92ACCE);
+    background-image: url(../img/bg_dir.png), url(../img/bg_esq.png), linear-gradient(45deg, #FFFFFF, #92ACCE);
     background-repeat: no-repeat;
-    background-attachment: scroll, scroll, scroll, fixed;
-    background-size: 15%, 15%, contain, cover;
-    background-position: left bottom, right top, center, center;
+    background-attachment: scroll, scroll, fixed;
+    background-size: 15%, 15%, cover;
+    background-position: right bottom, left top, center;
 }
 
 .borda {
