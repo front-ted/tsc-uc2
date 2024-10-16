@@ -886,6 +886,7 @@ tbody td:first-child {
 .bg-escuro li,
 .bg-escuro figcaption,
 .bg-escuro .tab-content,
+.bg-escuro .bt-tooltip,
 .bg-escuro .modal-body * {
     color: #fff;
 }

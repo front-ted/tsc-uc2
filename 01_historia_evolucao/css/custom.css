@@ -48,14 +48,15 @@ body{
     transition: all .4s;
 }
 
-.bt-saibamais,
-.bt-lei,
-.bt-cargos{
-    width: 100%;
-    background-size: contain;
-}
+
 
 @media (max-width: 580px){
+    .bt-saibamais,
+    .bt-lei,
+    .bt-cargos{
+        width: 100%;
+        background-size: contain;
+    }
     .livro::after{
         width: 300px;
         background-size: contain;
