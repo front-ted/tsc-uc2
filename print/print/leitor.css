@@ -283,14 +283,14 @@ th{
 }
 
 /* código para tabela não desconfigurar na versão impressa */
-table.text-left.align-middle {
+table {
   width: 80% !important;
   border-collapse: collapse !important;
   margin-bottom: 10px !important;
   margin: auto !important;
 }
 
-table.text-left.align-middle th {
+table th {
   border: 1px solid black !important;
   padding: 8px !important;
   text-align: left !important;
@@ -299,7 +299,7 @@ table.text-left.align-middle th {
   font-weight: bold !important;
 }
 
-table.text-left.align-middle td {
+table td {
   border: 1px solid black !important;
   padding: 8px !important;
   text-align: left !important;
