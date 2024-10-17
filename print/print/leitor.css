@@ -164,7 +164,7 @@
 }
 .pagina img	{
   display: inline-block;
-  max-width: 60% !important;
+  /* max-width: 60% !important; */
 }
 .pagina legend{
   display: block;
@@ -334,7 +334,7 @@ table td {
 .pagina .accordion h2{
   font-size: 1.1rem;
 }
-
+.destaque.gradiente * {color: #fff;}
 /**,
 *:before,
 *:after,
