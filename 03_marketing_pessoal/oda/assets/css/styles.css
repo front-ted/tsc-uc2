@@ -1,0 +1,1158 @@
+@font-face {
+  font-family: "Diaria Pro";
+  src: local("../fonts/Diaria Pro Bold.otf");
+}
+html, body {
+  height: 100%;
+  /* Fica dica: https://www.magicpattern.design/tools/css-backgrounds */
+  background-color: #e5e5f7;
+  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 20px 20px, linear-gradient(#b0b4ee 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, #b0b4ee 1.6px, #e5e5f7 1.6px) -0.8px 0;
+  background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}
+
+.preloader {
+  display: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #6AABBF;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.loader .logo-senac {
+  margin-bottom: 20px;
+}
+.loader p {
+  font-size: 24px;
+  color: white;
+}
+
+.wrapper {
+  height: 1080px;
+  width: 1920px;
+  position: fixed;
+  left: calc(50% - 960px);
+  margin: auto;
+  top: calc(50% - 540px);
+}
+.wrapper .tela {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.wrapper .tela-1 {
+  background-image: url("../img/capa_BG.jpg");
+  height: 100%;
+  width: 100%;
+}
+.wrapper .tela-1 .logo-senac {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+.wrapper .tela-1 .logo-tsc {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.wrapper .tela-1 .img-pessoas,
+.wrapper .tela-1 .img-spotlights {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 13%;
+  z-index: 3;
+}
+.wrapper .tela-1 .img-spotlights {
+  bottom: 9%;
+  z-index: 2;
+}
+.wrapper .tela-1 .logo-obj {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.wrapper .tela-2 {
+  background-image: url("../img/BG_intro.jpg");
+}
+.wrapper .tela-2 .msg {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  font-size: 28px;
+  width: 950px;
+  padding: 300px 35px 35px 35px;
+  height: 814px;
+  background-image: url("../img/painel_intro.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrapper .tela-2 .msg .btn-container {
+  height: 70%;
+}
+.wrapper .tela-2 .msg .msg-container {
+  height: 120px;
+  width: 100%;
+}
+.wrapper .tela-2 .msg .btn-next,
+.wrapper .tela-2 .msg .btn-prev {
+  width: 66px;
+  height: 62px;
+  background-color: transparent;
+  border: none;
+  margin: 25px;
+  margin-bottom: 50px;
+}
+.wrapper .tela-2 .msg .btn-next {
+  background-image: url("../img/seta_proximo.png");
+}
+.wrapper .tela-2 .msg .btn-next:hover {
+  background-image: url("../img/seta_proximo_hv.png");
+}
+.wrapper .tela-2 .msg .btn-next.disabled {
+  background-image: url("../img/seta_proximo_inativo.png");
+  pointer-events: none;
+}
+.wrapper .tela-2 .msg .btn-prev {
+  background-image: url("../img/seta_anterior.png");
+}
+.wrapper .tela-2 .msg .btn-prev:hover {
+  background-image: url("../img/seta_anterior_hv.png");
+}
+.wrapper .tela-2 .msg .btn-prev.disabled {
+  background-image: url("../img/seta_anterior_inativo.png");
+  pointer-events: none;
+}
+.wrapper .tela-2 .msg .start-btn {
+  width: 382px;
+  height: 118px;
+  background-color: transparent;
+  border: none;
+  font-size: 0px;
+  background-image: url("../img/bt_iniciar.png");
+}
+.wrapper .tela-2 .msg .start-btn:hover {
+  background-image: url("../img/bt_iniciar_hv.png");
+}
+.wrapper .tela-2 .msg .start-btn.disabled {
+  background-image: url("../img/bt_iniciar_hv_desat.png");
+  pointer-events: none;
+}
+.wrapper .tela-3 {
+  background-image: url("../img/BG_avatar.jpg");
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+.wrapper .tela-3 .msg {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-image: url("../img/painel_tutorial1.png");
+  width: 1024px;
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 60px;
+  font-size: 30px;
+  text-align: center;
+}
+.wrapper .tela-3 .confirmar-selecao {
+  height: 128px;
+  width: 500px;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/bt_confirmar.png");
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.wrapper .tela-3 .confirmar-selecao:hover {
+  background-image: url("../img/bt_confirmar_hv.png");
+}
+.wrapper .tela-3 .gen-selector {
+  height: 773px;
+  width: 390px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+}
+.wrapper .tela-3 .gen-selector.masc {
+  background-image: url("../img/ilustra/Silhueta_Masculina.png");
+  margin-right: 150px;
+}
+.wrapper .tela-3 .gen-selector.masc .label {
+  background-image: url("../img/bt_masculino.png");
+  right: 250px;
+}
+.wrapper .tela-3 .gen-selector.masc .label p {
+  opacity: 0;
+  position: absolute;
+}
+.wrapper .tela-3 .gen-selector.masc:hover, .wrapper .tela-3 .gen-selector.masc.active {
+  transform: scale(1.05);
+}
+.wrapper .tela-3 .gen-selector.masc:hover .label, .wrapper .tela-3 .gen-selector.masc.active .label {
+  background-image: url("../img/bt_masculino_hv.png");
+  transform: scale(0.9);
+}
+.wrapper .tela-3 .gen-selector.fem {
+  background-image: url("../img/ilustra/Silhueta_Feminina.png");
+}
+.wrapper .tela-3 .gen-selector.fem .label {
+  background-image: url("../img/bt_feminino.png");
+  left: 250px;
+}
+.wrapper .tela-3 .gen-selector.fem .label p {
+  opacity: 0;
+  position: absolute;
+}
+.wrapper .tela-3 .gen-selector.fem:hover, .wrapper .tela-3 .gen-selector.fem.active {
+  transform: scale(1.05);
+}
+.wrapper .tela-3 .gen-selector.fem:hover .label, .wrapper .tela-3 .gen-selector.fem.active .label {
+  background-image: url("../img/bt_feminino_hv.png");
+  transform: scale(0.9);
+}
+.wrapper .tela-3 .gen-selector .label {
+  position: absolute;
+  width: 512px;
+  height: 256px;
+}
+.wrapper .tela-4 {
+  background-image: url("../img/Marketing_Pessoal_Recepcao.png");
+}
+.wrapper .tela-4 .cena-ui .ilustra-cliente {
+  bottom: 45px;
+  left: 180px;
+}
+.wrapper .tela-4 .cena-ui .personagem-container {
+  left: 500px;
+  bottom: 45px;
+}
+.wrapper .tela-5 {
+  background-image: url("../img/Marketing_Pessoal_Reuniao.png");
+}
+.wrapper .tela-5 .cena-ui .personagem-container {
+  right: 660px;
+  bottom: 80px;
+}
+.wrapper .tela-6 {
+  background-image: url("../img/Marketing_Pessoal_Palestra_Fundo.png");
+}
+.wrapper .tela-6 .cena-ui .ilustra-plateia {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.wrapper .tela-6 .cena-ui .personagem-container {
+  left: 450px;
+  bottom: 100px;
+  z-index: 2;
+}
+.wrapper .tela-7 {
+  background-image: url("../img/Marketing_Pessoal_SextaCasual.png");
+}
+.wrapper .tela-7 .cena-ui .personagem-container {
+  bottom: 30px;
+  left: 60px;
+}
+.wrapper .tela-4 .titulo-cena,
+.wrapper .tela-5 .titulo-cena,
+.wrapper .tela-6 .titulo-cena,
+.wrapper .tela-7 .titulo-cena {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background-image: url("../img/painel_titulo.png");
+  width: 546px;
+  height: 145px;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.wrapper .tela-4 .titulo-cena p,
+.wrapper .tela-5 .titulo-cena p,
+.wrapper .tela-6 .titulo-cena p,
+.wrapper .tela-7 .titulo-cena p {
+  margin: 0;
+  padding: 0;
+  font-family: "Diaria Pro";
+  color: #754d38;
+  font-weight: 600;
+}
+.wrapper .tela-4 .cena-ui .ilustra-cliente,
+.wrapper .tela-5 .cena-ui .ilustra-cliente,
+.wrapper .tela-6 .cena-ui .ilustra-cliente,
+.wrapper .tela-7 .cena-ui .ilustra-cliente {
+  position: absolute;
+}
+.wrapper .tela-4 .cena-ui .personagem-container,
+.wrapper .tela-5 .cena-ui .personagem-container,
+.wrapper .tela-6 .cena-ui .personagem-container,
+.wrapper .tela-7 .cena-ui .personagem-container {
+  position: absolute;
+}
+.wrapper .tela-4 .dialog,
+.wrapper .tela-5 .dialog,
+.wrapper .tela-6 .dialog,
+.wrapper .tela-7 .dialog {
+  position: relative;
+  background-image: url("../img/painel_lateral.png");
+  height: 956px;
+  width: 505px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 240px;
+  padding-right: 25px;
+  padding-left: 105px;
+  margin-left: auto;
+  margin-right: 60px;
+  font-size: 28px;
+  text-align: center;
+}
+.wrapper .tela-4 .dialog .title,
+.wrapper .tela-5 .dialog .title,
+.wrapper .tela-6 .dialog .title,
+.wrapper .tela-7 .dialog .title {
+  position: absolute;
+  top: 123px;
+  left: 58%;
+  text-align: center;
+  font-size: 30px;
+  transform: translateX(-50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Diaria Pro";
+  font-weight: 600;
+  color: #754d38;
+}
+.wrapper .tela-4 .dialog .msg .title,
+.wrapper .tela-5 .dialog .msg .title,
+.wrapper .tela-6 .dialog .msg .title,
+.wrapper .tela-7 .dialog .msg .title {
+  top: 140px;
+}
+.wrapper .tela-4 .dialog .seletor-aba,
+.wrapper .tela-5 .dialog .seletor-aba,
+.wrapper .tela-6 .dialog .seletor-aba,
+.wrapper .tela-7 .dialog .seletor-aba {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -20px;
+}
+.wrapper .tela-4 .dialog .aba-info,
+.wrapper .tela-4 .dialog .aba-roupas,
+.wrapper .tela-5 .dialog .aba-info,
+.wrapper .tela-5 .dialog .aba-roupas,
+.wrapper .tela-6 .dialog .aba-info,
+.wrapper .tela-6 .dialog .aba-roupas,
+.wrapper .tela-7 .dialog .aba-info,
+.wrapper .tela-7 .dialog .aba-roupas {
+  background-color: transparent;
+  border: none;
+  width: 104px;
+  height: 112px;
+}
+.wrapper .tela-4 .dialog .aba-info.ativo,
+.wrapper .tela-4 .dialog .aba-roupas.ativo,
+.wrapper .tela-5 .dialog .aba-info.ativo,
+.wrapper .tela-5 .dialog .aba-roupas.ativo,
+.wrapper .tela-6 .dialog .aba-info.ativo,
+.wrapper .tela-6 .dialog .aba-roupas.ativo,
+.wrapper .tela-7 .dialog .aba-info.ativo,
+.wrapper .tela-7 .dialog .aba-roupas.ativo {
+  width: 140px;
+  height: 112px;
+  margin-left: -36px;
+}
+.wrapper .tela-4 .dialog .aba-info,
+.wrapper .tela-5 .dialog .aba-info,
+.wrapper .tela-6 .dialog .aba-info,
+.wrapper .tela-7 .dialog .aba-info {
+  background-image: url("../img/painel_lat_taginfo_des.png");
+}
+.wrapper .tela-4 .dialog .aba-info:hover, .wrapper .tela-4 .dialog .aba-info.ativo,
+.wrapper .tela-5 .dialog .aba-info:hover,
+.wrapper .tela-5 .dialog .aba-info.ativo,
+.wrapper .tela-6 .dialog .aba-info:hover,
+.wrapper .tela-6 .dialog .aba-info.ativo,
+.wrapper .tela-7 .dialog .aba-info:hover,
+.wrapper .tela-7 .dialog .aba-info.ativo {
+  background-image: url("../img/painel_lat_taginfo_ativ.png");
+}
+.wrapper .tela-4 .dialog .aba-roupas,
+.wrapper .tela-5 .dialog .aba-roupas,
+.wrapper .tela-6 .dialog .aba-roupas,
+.wrapper .tela-7 .dialog .aba-roupas {
+  background-image: url("../img/painel_lat_tagvest_des.png");
+}
+.wrapper .tela-4 .dialog .aba-roupas:hover, .wrapper .tela-4 .dialog .aba-roupas.ativo,
+.wrapper .tela-5 .dialog .aba-roupas:hover,
+.wrapper .tela-5 .dialog .aba-roupas.ativo,
+.wrapper .tela-6 .dialog .aba-roupas:hover,
+.wrapper .tela-6 .dialog .aba-roupas.ativo,
+.wrapper .tela-7 .dialog .aba-roupas:hover,
+.wrapper .tela-7 .dialog .aba-roupas.ativo {
+  background-image: url("../img/painel_lat_tagvest_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .roupa-select,
+.wrapper .tela-5 .dialog .vestimenta-ui .roupa-select,
+.wrapper .tela-6 .dialog .vestimenta-ui .roupa-select,
+.wrapper .tela-7 .dialog .vestimenta-ui .roupa-select {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  height: 312px;
+  width: 170px;
+  margin: 5px;
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1 {
+  background-image: url("../img/opcoes/novas/masc_opcao_i.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-1:hover {
+  background-image: url("../img/opcoes/novas/masc_opcao_i_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2 {
+  background-image: url("../img/opcoes/masc_opcao_b.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-2:hover {
+  background-image: url("../img/opcoes/masc_opcao_b_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3 {
+  background-image: url("../img/opcoes/masc_opcao_c.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-3:hover {
+  background-image: url("../img/opcoes/masc_opcao_c_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4 {
+  background-image: url("../img/opcoes/masc_opcao_d.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-4:hover {
+  background-image: url("../img/opcoes/masc_opcao_d_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5 {
+  background-image: url("../img/opcoes/novas/masc_opcao_g.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-5:hover {
+  background-image: url("../img/opcoes/novas/masc_opcao_g_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6 {
+  background-image: url("../img/opcoes/masc_opcao_d.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-6:hover {
+  background-image: url("../img/opcoes/masc_opcao_d_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7 {
+  background-image: url("../img/opcoes/masc_opcao_c.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-7:hover {
+  background-image: url("../img/opcoes/masc_opcao_c_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8 {
+  background-image: url("../img/opcoes/novas/masc_opcao_e.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-8:hover {
+  background-image: url("../img/opcoes/novas/masc_opcao_e_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9 {
+  background-image: url("../img/opcoes/novas/masc_opcao_f.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-9:hover {
+  background-image: url("../img/opcoes/novas/masc_opcao_f_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10 {
+  background-image: url("../img/opcoes/masc_opcao_b.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-10:hover {
+  background-image: url("../img/opcoes/masc_opcao_b_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12 {
+  background-image: url("../img/opcoes/novas/masc_opcao_h.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-12:hover {
+  background-image: url("../img/opcoes/novas/masc_opcao_h_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11 {
+  background-image: url("../img/opcoes/masc_opcao_c.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-11:hover {
+  background-image: url("../img/opcoes/masc_opcao_c_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13 {
+  background-image: url("../img/opcoes/masc_opcao_a.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-13:hover {
+  background-image: url("../img/opcoes/masc_opcao_a_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14 {
+  background-image: url("../img/opcoes/masc_opcao_b.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-14:hover {
+  background-image: url("../img/opcoes/masc_opcao_b_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15 {
+  background-image: url("../img/opcoes/masc_opcao_c.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-15:hover {
+  background-image: url("../img/opcoes/masc_opcao_c_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16 {
+  background-image: url("../img/opcoes/masc_opcao_d.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino .btn-roupa-16:hover {
+  background-image: url("../img/opcoes/masc_opcao_d_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1 {
+  background-image: url("../img/opcoes/novas/fem_opcao_f.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-1:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_f_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2 {
+  background-image: url("../img/opcoes/fem_opcao_b.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-2:hover {
+  background-image: url("../img/opcoes/fem_opcao_b_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3 {
+  background-image: url("../img/opcoes/fem_opcao_c.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-3:hover {
+  background-image: url("../img/opcoes/fem_opcao_c_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4 {
+  background-image: url("../img/opcoes/fem_opcao_d.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-4:hover {
+  background-image: url("../img/opcoes/fem_opcao_d_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5 {
+  background-image: url("../img/opcoes/novas/fem_opcao_g.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-5:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_g_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6 {
+  background-image: url("../img/opcoes/novas/fem_opcao_h.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-6:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_h_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7 {
+  background-image: url("../img/opcoes/novas/fem_opcao_e.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-7:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_e_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8 {
+  background-image: url("../img/opcoes/novas/fem_opcao_i.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-8:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_i_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9 {
+  background-image: url("../img/opcoes/fem_opcao_a.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-9:hover {
+  background-image: url("../img/opcoes/fem_opcao_a_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10 {
+  background-image: url("../img/opcoes/fem_opcao_b.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-10:hover {
+  background-image: url("../img/opcoes/fem_opcao_b_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11 {
+  background-image: url("../img/opcoes/fem_opcao_c.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-11:hover {
+  background-image: url("../img/opcoes/fem_opcao_c_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12 {
+  background-image: url("../img/opcoes/fem_opcao_d.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-12:hover {
+  background-image: url("../img/opcoes/fem_opcao_d_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13 {
+  background-image: url("../img/opcoes/novas/fem_opcao_e.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-13:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_e_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14 {
+  background-image: url("../img/opcoes/novas/fem_opcao_i.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-14:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_i_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15 {
+  background-image: url("../img/opcoes/novas/fem_opcao_h.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-15:hover {
+  background-image: url("../img/opcoes/novas/fem_opcao_h_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16 {
+  background-image: url("../img/opcoes/fem_opcao_d.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16:hover,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16:hover,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16:hover,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino .btn-roupa-16:hover {
+  background-image: url("../img/opcoes/fem_opcao_d_ativ.png");
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino button,
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino button,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino button,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino button,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino button,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino button,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino button,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino button {
+  position: relative;
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(1)::before,
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(1)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(1)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(1)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(1)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(1)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(1)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/opcoes/opcao_a.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(2)::before,
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(2)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(2)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(2)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(2)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(2)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(2)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/opcoes/opcao_b.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(3)::before,
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(3)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(3)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(3)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(3)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(3)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(3)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(3)::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/opcoes/opcao_c.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+}
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(4)::before,
+.wrapper .tela-4 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(4)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(4)::before,
+.wrapper .tela-5 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(4)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(4)::before,
+.wrapper .tela-6 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(4)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-feminino button:nth-of-type(4)::before,
+.wrapper .tela-7 .dialog .vestimenta-ui .vestuario-masculino button:nth-of-type(4)::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/opcoes/opcao_d.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+}
+.wrapper .tela-4 .btn-dicas,
+.wrapper .tela-5 .btn-dicas,
+.wrapper .tela-6 .btn-dicas,
+.wrapper .tela-7 .btn-dicas {
+  background-image: url("../img/bt_dica.png");
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  bottom: 40px;
+  left: 40px;
+  width: 238px;
+  height: 80px;
+  z-index: 5;
+}
+.wrapper .tela-4 .btn-dicas:hover,
+.wrapper .tela-5 .btn-dicas:hover,
+.wrapper .tela-6 .btn-dicas:hover,
+.wrapper .tela-7 .btn-dicas:hover {
+  background-image: url("../img/bt_dica_hv.png");
+}
+.wrapper .tela-4 .backdrop,
+.wrapper .tela-5 .backdrop,
+.wrapper .tela-6 .backdrop,
+.wrapper .tela-7 .backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+}
+.wrapper .tela-4 .backdrop .seta-tutorial,
+.wrapper .tela-5 .backdrop .seta-tutorial,
+.wrapper .tela-6 .backdrop .seta-tutorial,
+.wrapper .tela-7 .backdrop .seta-tutorial {
+  position: absolute;
+  bottom: 37px;
+  left: 300px;
+}
+.wrapper .tela-4 .backdrop .msg,
+.wrapper .tela-5 .backdrop .msg,
+.wrapper .tela-6 .backdrop .msg,
+.wrapper .tela-7 .backdrop .msg {
+  position: absolute;
+  width: 678px;
+  height: 167px;
+  background-image: url("../img/painel_tutorial2.png");
+  background-repeat: no-repeat;
+  font-size: 28px;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0;
+  bottom: 37px;
+  left: 500px;
+}
+.wrapper .tela-final {
+  background: rgb(106, 171, 191);
+  background: radial-gradient(circle, rgb(106, 171, 191) 0%, rgb(50, 115, 137) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .tela-final .dialog {
+  width: 740px;
+  font-size: 28px;
+  text-align: center;
+  background-image: url("../img/painel_intro.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 240px;
+  min-height: 660px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.wrapper .tela-final .dialog .restart-btn {
+  background-color: #327389;
+  color: white;
+  position: relative;
+  font-size: 28px;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.wrapper .tela-final .dialog .restart-btn::after {
+  content: "";
+  position: absolute;
+  height: 140%;
+  background-color: transparent;
+  top: -20%;
+  left: -7.5%;
+  border: 2px solid #327389;
+  border-radius: 8px;
+  width: 115%;
+}
+.wrapper .tela-final .dialog .restart-btn:hover {
+  background-color: #6AABBF;
+}
+.wrapper .tela-final .dialog .restart-btn:hover::after {
+  border-color: #6AABBF;
+}
+
+.modal-dialog {
+  width: 794px;
+  height: 692px;
+  max-width: unset;
+}
+
+#modal-negativo .modal-content,
+#modal-positivo .modal-content,
+.modal-dicas .modal-content {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 794px;
+  height: 542px;
+  border: none;
+}
+#modal-negativo .modal-content .modal-header,
+#modal-positivo .modal-content .modal-header,
+.modal-dicas .modal-content .modal-header {
+  background-color: transparent;
+  border-bottom: none;
+  margin-top: 54px;
+  justify-content: center;
+  font-family: "Diaria Pro";
+  color: #754d38;
+}
+#modal-negativo .modal-content .modal-header .modal-title,
+#modal-positivo .modal-content .modal-header .modal-title,
+.modal-dicas .modal-content .modal-header .modal-title {
+  font-weight: 600;
+  font-size: 28px;
+}
+#modal-negativo .modal-content .modal-header .btn-close,
+#modal-positivo .modal-content .modal-header .btn-close,
+.modal-dicas .modal-content .modal-header .btn-close {
+  display: none;
+}
+#modal-negativo .modal-content .modal-body,
+#modal-positivo .modal-content .modal-body,
+.modal-dicas .modal-content .modal-body {
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 22px;
+}
+#modal-negativo .modal-content .modal-footer,
+#modal-positivo .modal-content .modal-footer,
+.modal-dicas .modal-content .modal-footer {
+  background-color: transparent;
+  border-top: none;
+  margin-bottom: 80px;
+  justify-content: center;
+}
+#modal-negativo .modal-content .btn-modal,
+#modal-positivo .modal-content .btn-modal,
+.modal-dicas .modal-content .btn-modal {
+  background-color: #327389;
+  color: white;
+  position: relative;
+  font-size: 18px;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+#modal-negativo .modal-content .btn-modal::after,
+#modal-positivo .modal-content .btn-modal::after,
+.modal-dicas .modal-content .btn-modal::after {
+  content: "";
+  position: absolute;
+  height: 140%;
+  background-color: transparent;
+  top: -20%;
+  left: -7.5%;
+  border: 2px solid #327389;
+  border-radius: 8px;
+  width: 115%;
+}
+#modal-negativo .modal-content .btn-modal:hover,
+#modal-positivo .modal-content .btn-modal:hover,
+.modal-dicas .modal-content .btn-modal:hover {
+  background-color: #6AABBF;
+}
+#modal-negativo .modal-content .btn-modal:hover::after,
+#modal-positivo .modal-content .btn-modal:hover::after,
+.modal-dicas .modal-content .btn-modal:hover::after {
+  border-color: #6AABBF;
+}
+
+#modal-negativo .modal-content {
+  background-image: url("../img/painel_feed_neg.png");
+}
+
+#modal-positivo .modal-content {
+  background-image: url("../img/painel_feed_pos.png");
+}
+
+.modal-dicas .modal-content {
+  background-image: url("../img/painel_dicas.png");
+}
+.modal-dicas .modal-content .modal-body {
+  padding-left: 90px;
+}
+.modal-dicas .modal-content p {
+  position: relative;
+}
+.modal-dicas .modal-content p::before {
+  content: "";
+  background-image: url("../img/check_dica.png");
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  left: -44px;
+  top: -2px;
+  transform: translate(-50% -50%);
+  height: 40px;
+  width: 40px;
+}
+
+.modo-smart {
+  display: none;
+  position: absolute;
+}
+
+@media only screen and (orientation: portrait) {
+  .modo-smart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #7c88e7;
+    z-index: 999;
+  }
+}/*# sourceMappingURL=styles.css.map */
