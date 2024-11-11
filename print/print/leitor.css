@@ -331,7 +331,7 @@ table td {
 .pagina *.clique{
   display: none;
 }
-.pagina .accordion h2{
+.pagina .accordion h5{
   font-size: 1.1rem;
 }
 .destaque.gradiente * {color: #fff;}

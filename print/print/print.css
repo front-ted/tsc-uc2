@@ -83,19 +83,19 @@
     font-size: 24pt;    
   }
   h2, h2.visually-hidden{
-    font-size: 20pt;
+    font-size: 22pt;
   }
   h3, h3.visually-hidden{
-    font-size: 18pt;   
+    font-size: 20pt;   
   }
   h4, h4.visually-hidden{
-    font-size: 16pt;   
+    font-size: 18pt;   
   }
   h5, h5.visually-hidden{
-    font-size: 14pt;    
+    font-size: 16pt;    
   }
   h6, h6.visually-hidden{
-    font-size: 12pt;    
+    font-size: 14pt;    
   }
   *{
     font-family: 'Libre Franklin Regular' !important

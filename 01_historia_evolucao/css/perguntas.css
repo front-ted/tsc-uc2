@@ -98,3 +98,22 @@
 }
 .f-positivo i.fas{color: #28afb2;}
 .f-negativo i.fas{color: #cd6667;}
+
+@media (max-width: 580px){
+    .titulo-ativ{
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    .esquemaDaBru .alt-c, .esquemaDaBru .alt-e{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .multipla-escolha button::before{
+        top: -55px;
+        left:0;
+        right: 0;
+        margin: auto;
+        bottom: unset;
+    }
+}

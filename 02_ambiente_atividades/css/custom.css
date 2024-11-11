@@ -45,8 +45,8 @@ body{
 .bt-disciplina:hover{background: url('../img/5_bt_hoover.png') no-repeat;}
 .bt-limpeza{
     background: url('../img/2_bt.png') no-repeat;
-    left: 200px;
-    top: 100px;
+    left: 340px;
+    top: 170px;
 }
 .bt-limpeza:hover{background: url('../img/2_bt_hoover.png') no-repeat;}
 .bt-padronizacao{
@@ -57,8 +57,8 @@ body{
 .bt-padronizacao:hover{background: url('../img/4_bt_hoover.png') no-repeat;}
 .bt-organizacao{
     background: url('../img/3_bt.png') no-repeat;
-    left: 340px;
-    top: 170px;
+    left: 200px;
+    top: 100px;
 }
 .bt-organizacao:hover{background: url('../img/3_bt_hoover.png') no-repeat;}
 

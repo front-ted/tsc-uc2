@@ -1030,6 +1030,8 @@ tbody td:first-child {
 }
 
 @media screen and (max-width: 580px) {
+    
+    
     .topo-logo {
         background-size: 47%, 14%;
         background-position: left -155px center, right 5% center;
