@@ -1,0 +1,1030 @@
+@font-face {
+    font-family: "Diaria Pro";
+    src: local('../fonts/Diaria Pro Bold.otf');
+}
+html, body {
+    height: 100%;
+    /* Fica dica: https://www.magicpattern.design/tools/css-backgrounds */
+    background-color: #e5e5f7;
+    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 20px 20px, linear-gradient(#b0b4ee 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, #b0b4ee 1.6px, #e5e5f7 1.6px) -0.8px 0;
+    background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}
+
+.preloader {
+    display: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #6AABBF;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    .logo-senac {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 24px;
+        color: white;
+    }
+}
+
+.wrapper {
+    height: 1080px;
+    width: 1920px;
+    position: fixed;
+    left: calc(50% - 1920px / 2);
+    margin: auto;
+    top: calc(50% - 1080px / 2);
+    
+    .tela {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    .tela-1 {
+        background-image: url('../img/capa_BG.jpg');
+        height: 100%;
+        width: 100%;
+
+        .logo-senac {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+        }
+
+        .logo-tsc {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .img-pessoas,
+        .img-spotlights {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 13%;
+            z-index: 3;
+        }
+
+        .img-spotlights {
+            bottom: 9%;
+            z-index: 2;
+        }
+
+        .logo-obj {
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+    }
+
+    .tela-2 {
+        background-image: url('../img/BG_intro.jpg');
+
+        .msg {
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            font-size: 28px;
+            width: 950px;
+            padding: 300px 35px 35px 35px;
+            height: 814px;
+            background-image: url('../img/painel_intro.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            .btn-container {
+                height: 70%;
+            }
+
+            .msg-container {
+                height: 120px;
+                width: 100%;
+            }
+
+            .btn-next,
+            .btn-prev {
+                width: 66px;
+                height: 62px;
+                background-color: transparent;
+                border: none;
+                margin: 25px;
+                margin-bottom: 50px;
+            }
+
+            .btn-next {
+                background-image: url('../img/seta_proximo.png');
+
+                &:hover {
+                    background-image: url('../img/seta_proximo_hv.png');
+                }
+
+                &.disabled {
+                    background-image: url('../img/seta_proximo_inativo.png');
+                    pointer-events: none;
+                }
+            }
+
+            .btn-prev {
+                background-image: url('../img/seta_anterior.png');
+
+                &:hover {
+                    background-image: url('../img/seta_anterior_hv.png');
+                }
+
+                &.disabled {
+                    background-image: url('../img/seta_anterior_inativo.png');
+                    pointer-events: none;
+                }
+            }
+
+            .start-btn {
+                width: 382px;
+                height: 118px;
+                background-color: transparent;
+                border: none;
+                font-size: 0px;
+                background-image: url('../img/bt_iniciar.png');
+
+                &:hover {
+                    background-image: url('../img/bt_iniciar_hv.png');
+                }
+
+                &.disabled {
+                    background-image: url('../img/bt_iniciar_hv_desat.png');
+                    pointer-events: none;
+                }
+
+            }
+        }
+    }
+
+    .tela-3 {
+        background-image: url('../img/BG_avatar.jpg');
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+
+        .msg {
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background-image: url('../img/painel_tutorial1.png');
+            width: 1024px;
+            height: 256px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 60px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .confirmar-selecao {
+            height: 128px;
+            width: 500px;
+            background-color: transparent;
+            border: none;
+            background-image: url('../img/bt_confirmar.png');
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+
+            &:hover {
+                background-image: url('../img/bt_confirmar_hv.png');
+            }
+        }
+
+        .gen-selector {
+            height: 773px;
+            width: 390px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent;
+            border: none;
+
+            &.masc {
+                background-image: url('../img/ilustra/Silhueta_Masculina.png');
+                margin-right: 150px;
+
+                .label {
+                    background-image: url('../img/bt_masculino.png');
+                    right: 250px;
+
+                    p {
+                        opacity: 0;
+                        position: absolute;
+                    }
+                }
+
+                &:hover,
+                &.active {
+                    transform: scale(1.05);
+
+                    .label {
+                        background-image: url('../img/bt_masculino_hv.png');
+                        transform: scale(.9);
+                    }
+                }
+            }
+
+            &.fem {
+                background-image: url('../img/ilustra/Silhueta_Feminina.png');
+
+                .label {
+                    background-image: url('../img/bt_feminino.png');
+                    left: 250px;
+
+                    p {
+                        opacity: 0;
+                        position: absolute;
+                    }
+                }
+
+                &:hover,
+                &.active {
+                    transform: scale(1.05);
+
+                    .label {
+                        background-image: url('../img/bt_feminino_hv.png');
+                        transform: scale(.9);
+                    }
+                }
+            }
+
+            .label {
+                position: absolute;
+                width: 512px;
+                height: 256px;
+            }
+        }
+    }
+
+    .tela-4 {
+        background-image: url('../img/Marketing_Pessoal_Recepcao.png');
+
+        .cena-ui {
+            .ilustra-cliente {
+                bottom: 45px;
+                left: 180px;
+            }
+
+            .personagem-container {
+                left: 500px;
+                bottom: 45px;
+            }
+        }
+    }
+
+    .tela-5 {
+        background-image: url('../img/Marketing_Pessoal_Reuniao.png');
+
+        .cena-ui {
+            .personagem-container {
+                right: 660px;
+                bottom: 80px;
+            }
+        }
+    }
+
+    .tela-6 {
+        background-image: url('../img/Marketing_Pessoal_Palestra_Fundo.png');
+
+        .cena-ui {
+            .ilustra-plateia {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 3;
+            }
+
+            .personagem-container {
+                left: 450px;
+                bottom: 100px;
+                z-index: 2;
+            }
+        }
+    }
+
+    .tela-7 {
+        background-image: url('../img/Marketing_Pessoal_SextaCasual.png');
+
+        .cena-ui {
+            .personagem-container {
+                bottom: 30px;
+                left: 60px;
+            }
+        }
+    }
+
+    .tela-4,
+    .tela-5,
+    .tela-6,
+    .tela-7 {
+        .titulo-cena {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            background-image: url('../img/painel_titulo.png');
+            width: 546px;
+            height: 145px;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-family: "Diaria Pro";
+                color: #754d38;
+                font-weight: 600;
+            }
+        }
+
+        .cena-ui {
+            .ilustra-cliente {
+                position: absolute;
+            }
+
+            .personagem-container {
+                position: absolute;
+            }
+        }
+
+        .dialog {
+            position: relative;
+            background-image: url('../img/painel_lateral.png');
+            height: 956px;
+            width: 505px;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-top: 240px;
+            padding-right: 25px;
+            padding-left: 105px;
+            margin-left: auto;
+            margin-right: 60px;
+            font-size: 28px;
+            text-align: center;
+
+            .title {
+                position: absolute;
+                top: 123px;
+                left: 58%;
+                text-align: center;
+                font-size: 30px;
+                transform: translateX(-50%);
+                width: fit-content;
+                font-family: "Diaria Pro";
+                font-weight: 600;
+                color: #754d38;
+            }
+
+            .msg .title {
+                top: 140px;
+            }
+
+            .seletor-aba {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: -20px;
+            }
+
+            .aba-info,
+            .aba-roupas {
+                background-color: transparent;
+                border: none;
+                width: 104px;
+                height: 112px;
+
+                &.ativo {
+                    width: 140px;
+                    height: 112px;
+                    margin-left: -36px;
+                }
+            }
+
+            .aba-info {
+                background-image: url('../img/painel_lat_taginfo_des.png');
+
+                &:hover,
+                &.ativo {
+                    background-image: url('../img/painel_lat_taginfo_ativ.png');
+                }
+            }
+
+            .aba-roupas {
+                background-image: url('../img/painel_lat_tagvest_des.png');
+
+                &:hover,
+                &.ativo {
+                    background-image: url('../img/painel_lat_tagvest_ativ.png');
+                }
+            }
+
+            .vestimenta-ui {
+
+                .roupa-select {
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-color: transparent;
+                    border: none;
+                    height: 312px;
+                    width: 170px;
+                    margin: 5px;
+                }
+
+                .vestuario-masculino {
+                    .btn-roupa-1 {
+                        background-image: url('../img/opcoes/novas/masc_opcao_i.png');
+
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/masc_opcao_i_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-2 {
+                        background-image: url('../img/opcoes/masc_opcao_b.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_b_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-3 {
+                        background-image: url('../img/opcoes/masc_opcao_c.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_c_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-4 {
+                        background-image: url('../img/opcoes/masc_opcao_d.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_d_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-5 {
+                        background-image: url('../img/opcoes/novas/masc_opcao_g.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/masc_opcao_g_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-6 {
+                        background-image: url('../img/opcoes/masc_opcao_d.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_d_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-7 {
+                        background-image: url('../img/opcoes/masc_opcao_c.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_c_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-8 {
+                        background-image: url('../img/opcoes/novas/masc_opcao_e.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/masc_opcao_e_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-9 {
+                        background-image: url('../img/opcoes/novas/masc_opcao_f.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/masc_opcao_f_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-10 {
+                        background-image: url('../img/opcoes/masc_opcao_b.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_b_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-12 {
+                        background-image: url('../img/opcoes/novas/masc_opcao_h.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/masc_opcao_h_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-11 {
+                        background-image: url('../img/opcoes/masc_opcao_c.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_c_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-13 {
+                        background-image: url('../img/opcoes/masc_opcao_a.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_a_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-14 {
+                        background-image: url('../img/opcoes/masc_opcao_b.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_b_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-15 {
+                        background-image: url('../img/opcoes/masc_opcao_c.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_c_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-16 {
+                        background-image: url('../img/opcoes/masc_opcao_d.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/masc_opcao_d_ativ.png');
+                        }
+                    }
+                }
+
+                .vestuario-feminino {
+                    .btn-roupa-1 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_f.png');
+
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_f_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-2 {
+                        background-image: url('../img/opcoes/fem_opcao_b.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_b_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-3 {
+                        background-image: url('../img/opcoes/fem_opcao_c.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_c_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-4 {
+                        background-image: url('../img/opcoes/fem_opcao_d.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_d_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-5 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_g.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_g_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-6 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_h.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_h_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-7 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_e.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_e_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-8 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_i.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_i_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-9 {
+                        background-image: url('../img/opcoes/fem_opcao_a.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_a_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-10 {
+                        background-image: url('../img/opcoes/fem_opcao_b.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_b_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-11 {
+                        background-image: url('../img/opcoes/fem_opcao_c.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_c_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-12 {
+                        background-image: url('../img/opcoes/fem_opcao_d.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_d_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-13 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_e.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_e_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-14 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_i.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_i_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-15 {
+                        background-image: url('../img/opcoes/novas/fem_opcao_h.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/novas/fem_opcao_h_ativ.png');
+                        }
+                    }
+
+                    .btn-roupa-16 {
+                        background-image: url('../img/opcoes/fem_opcao_d.png');
+
+                        &:hover {
+                            background-image: url('../img/opcoes/fem_opcao_d_ativ.png');
+                        }
+                    }
+                }
+
+                .vestuario-feminino,
+                .vestuario-masculino {
+                    button {
+                        position: relative;
+                    }
+
+                    button:nth-of-type(1)::before {
+                        content: '';
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        background-image: url('../img/opcoes/opcao_a.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    button:nth-of-type(2)::before {
+                        content: '';
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        background-image: url('../img/opcoes/opcao_b.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    button:nth-of-type(3)::before {
+                        content: '';
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        background-image: url('../img/opcoes/opcao_c.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    button:nth-of-type(4)::before {
+                        content: '';
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        background-image: url('../img/opcoes/opcao_d.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+
+        }
+
+        .btn-dicas {
+            background-image: url('../img/bt_dica.png');
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            bottom: 40px;
+            left: 40px;
+            width: 238px;
+            height: 80px;
+            z-index: 5;
+
+
+            &:hover {
+                background-image: url('../img/bt_dica_hv.png');
+            }
+        }
+
+        .backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: .6);
+            z-index: 4;
+
+            .seta-tutorial {
+                position: absolute;
+                bottom: 37px;
+                left: 300px;
+            }
+
+            .msg {
+                position: absolute;
+                width: 678px;
+                height: 167px;
+                background-image: url('../img/painel_tutorial2.png');
+                background-repeat: no-repeat;
+                font-size: 28px;
+                text-align: center;
+                padding: 20px;
+                padding-bottom: 0;
+                bottom: 37px;
+                left: 500px;
+            }
+        }
+    }
+
+    .tela-final {
+        background: rgb(106, 171, 191);
+        background: radial-gradient(circle, rgba(106, 171, 191, 1) 0%, rgba(50, 115, 137, 1) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dialog {
+            width: 740px;
+            font-size: 28px;
+            text-align: center;
+            background-image: url('../img/painel_intro.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-top: 240px;
+            min-height: 660px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .restart-btn {
+                background-color: #327389;
+                color: white;
+                position: relative;
+                font-size: 28px;
+                padding: 12px 60px;
+                border: none;
+                border-radius: 5px;
+                text-transform: uppercase;
+                font-weight: 500;
+                margin-top: 15px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 140%;
+                    background-color: transparent;
+                    top: -20%;
+                    left: -7.5%;
+                    border: 2px solid #327389;
+                    border-radius: 8px;
+                    width: 115%;
+                }
+
+                &:hover {
+                    background-color: #6AABBF;
+
+                    &::after {
+                        border-color: #6AABBF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-dialog {
+    width: 794px;
+    height: 692px;
+    max-width: unset;
+}
+
+#modal-negativo .modal-content,
+#modal-positivo .modal-content,
+.modal-dicas .modal-content {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 794px;
+    height: 542px;
+    border: none;
+
+    .modal-header {
+        background-color: transparent;
+        border-bottom: none;
+        margin-top: 54px;
+        justify-content: center;
+        font-family: 'Diaria Pro';
+        color: #754d38;
+
+        .modal-title {
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+
+        .btn-close {
+            display: none;
+        }
+    }
+
+    .modal-body {
+        padding-top: 60px;
+        padding-left: 60px;
+        padding-right: 60px;
+        font-size: 22px;
+    }
+
+    .modal-footer {
+        background-color: transparent;
+        border-top: none;
+        margin-bottom: 80px;
+        justify-content: center;
+    }
+
+    .btn-modal {
+        background-color: #327389;
+        color: white;
+        position: relative;
+        font-size: 18px;
+        padding: 12px 60px;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 25px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 140%;
+            background-color: transparent;
+            top: -20%;
+            left: -7.5%;
+            border: 2px solid #327389;
+            border-radius: 8px;
+            width: 115%;
+        }
+
+        &:hover {
+            background-color: #6AABBF;
+
+            &::after {
+                border-color: #6AABBF;
+            }
+        }
+    }
+}
+
+#modal-negativo .modal-content {
+    background-image: url('../img/painel_feed_neg.png');
+}
+
+#modal-positivo .modal-content {
+    background-image: url('../img/painel_feed_pos.png');
+}
+
+.modal-dicas .modal-content {
+    background-image: url('../img/painel_dicas.png');
+
+    .modal-body {
+        padding-left: 90px;
+    }
+
+    p {
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url('../img/check_dica.png');
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            left: -44px;
+            top: -2px;
+            transform: translate(-50% -50%);
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+
+.modo-smart {
+    display: none;
+    position: absolute;
+}
+
+@media only screen and (orientation: portrait) {
+    .modo-smart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #7c88e7;
+        z-index: 999;
+    }
+}

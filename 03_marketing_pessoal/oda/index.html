@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnico em Secretariado - Marketing pessoal</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="assets/img/capa_BG.jpg" alt="">
+        <img src="assets/img/capa_pessoas.png" alt="">
+        <img src="assets/img/capa_spotlights.png" alt="">
+        <img src="assets/img/logo_objeto.png" alt="">
+        <img src="assets/img/logo_instituicao.png" alt="">
+        <img src="assets/img/logo_TSC.png" alt="">
+        <img src="assets/img/seta_anterior_hv.png" alt="">
+        <img src="assets/img/seta_anterior_inativo.png" alt="">
+        <img src="assets/img/seta_proximo_hv.png" alt="">
+        <img src="assets/img/seta_proximo_inativo.png" alt="">
+        <img src="assets/img/bt_feminino_hv.png" alt="">
+        <img src="assets/img/bt_masculino_hv.png" alt="">
+        <img src="assets/img/painel_lat_taginfo_ativ.png" alt="">
+        <img src="assets/img/painel_lat_taginfo_des.png" alt="">
+        <img src="assets/img/painel_lat_tagvest_ativ.png" alt="">
+        <img src="assets/img/painel_lat_tagvest_des.png" alt="">
+        <img src="assets/img/opcoes/fem_opcao_a_ativ.png" alt="">
+        <img src="assets/img/opcoes/fem_opcao_b_ativ.png" alt="">
+        <img src="assets/img/opcoes/fem_opcao_c_ativ.png" alt="">
+        <img src="assets/img/opcoes/fem_opcao_d_ativ.png" alt="">
+        <img src="assets/img/opcoes/masc_opcao_a_ativ.png" alt="">
+        <img src="assets/img/opcoes/masc_opcao_b_ativ.png" alt="">
+        <img src="assets/img/opcoes/masc_opcao_c_ativ.png" alt="">
+        <img src="assets/img/opcoes/masc_opcao_d_ativ.png" alt="">
+        <img src="assets/img/bt_confirmar_hv.png" alt="">
+        <img src="assets/img/bt_iniciar_hv.png" alt="">
+        <img src="assets/img/bt_dica_hv.png" alt="">
+        <img src="assets/img/opcoes/novas/fem_opcao_e_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/fem_opcao_f_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/fem_opcao_g_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/fem_opcao_h_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/fem_opcao_i_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/masc_opcao_e_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/masc_opcao_f_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/masc_opcao_g_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/masc_opcao_h_ativ.png" alt="">
+        <img src="assets/img/opcoes/novas/masc_opcao_i_ativ.png" alt="">
+    </div>
+    <div class="modo-smart">
+        <div class="text-center">
+            <p class="p-paisagem text-center">
+                <img src="assets/img/vire.gif" class="img-fluid img-paisagem d-inline-block"><br>
+                <strong>Por favor, gire o aparelho para o modo paisagem.</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="loader">
+            <img src="assets/img/logo_instituicao.png" class="logo-senac">
+            <p>Carregando...</p>
+        </div>
+        <div class="tela tela-1">
+            <img src="assets/img/logo_TSC.png" class="logo-tsc">
+            <img src="assets/img/logo_objeto.png" class="logo-obj">
+            <img src="assets/img/capa_pessoas.png" class="img-pessoas" alt="ilustração com pessoas">
+            <img src="assets/img/capa_spotlights.png" class="img-spotlights">
+            <img src="assets/img/logo_instituicao.png" class="logo-senac">
+        </div>
+        <div class="tela tela-2">
+            <div class="msg">
+                <div class="msg-container">
+                    <p>Neste desafio, você deve observar cada um dos quatro contextos comuns no dia a dia do
+                        profissional de
+                        secretariado e escolher a opção que representa a composição ideal para cada situação.</p>
+                    <p>Lembre-se de que para cada uma delas há apenas uma opção ideal, portanto, considere todos os
+                        detalhes
+                        de cada proposta.</p>
+                </div>
+                <div class="btn-container d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <button class="btn-prev disabled"></button>
+                        <button class="btn-next"></button>
+                    </div>
+                    <button class="tsc-btn start-btn disabled">Iniciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="tela tela-3">
+            <p class="msg">Para começar, selecione o gênero do modelo que você gostaria de construir a vestimenta
+                ideal.
+            </p>
+            <!-- SELETOR DE GENERO -->
+            <div class="gen-container">
+                <button data-selector="masculino" class="gen-selector masc">
+                    <div class="label">
+                        <p>Masculino</p>
+                    </div>
+                </button>
+                <button data-selector="feminino" class="gen-selector fem">
+                    <div class="label">
+                        <p>Feminino</p>
+                    </div>
+                </button>
+            </div>
+            <button class="confirmar-selecao hidden">
+
+            </button>
+        </div>
+        <div class="tela tela-4">
+            <div class="ui-tsc">
+                <div class="titulo-cena">
+                    <p>Recepção de clientes</p>
+                </div>
+                <div class="cena-ui">
+                    <img src="assets/img/ilustra/Cliente_Recepcao.png" class="ilustra-cliente">
+                    <div class="personagem-container">
+                        <div class="img-feminino">
+                            <img src="assets/img/ilustra/novas/nova_03a.png" data-roupa="1" class="roupa-1 correto">
+                            <img src="assets/img/ilustra/Mulher_Recepcao_Roupa02.png" data-roupa="1" class="roupa-2">
+                            <img src="assets/img/ilustra/Mulher_Recepcao_Roupa03.png" data-roupa="1" class="roupa-3">
+                            <img src="assets/img/ilustra/Mulher_Recepcao_Roupa04.png" data-roupa="1" class="roupa-4">
+                        </div>
+                        <div class="img-masculino">
+                            <img src="assets/img/ilustra/novas/nova_07a.png" data-roupa="1" class="roupa-1 correto">
+                            <img src="assets/img/ilustra/Homem_Recepcao_Roupa02.png" data-roupa="1" class="roupa-2">
+                            <img src="assets/img/ilustra/Homem_Recepcao_Roupa03.png" data-roupa="1" class="roupa-3">
+                            <img src="assets/img/ilustra/Homem_Recepcao_Roupa04.png" data-roupa="1" class="roupa-4">
+                        </div>
+                    </div>
+                    <div class="dialog">
+                        <div class="seletor-aba">
+                            <button class="aba-info ativo"></button>
+                            <button class="aba-roupas"></button>
+                        </div>
+                        <div class="msg">
+                            <h4 class="title">Situação</h4>
+                            <p>Você é responsável por recepcionar clientes importantes na empresa. A primeira
+                                impressão
+                                é crucial, por isso, o visual deve ser impecável e transmitir profissionalismo e
+                                confiança.</p>
+                            <p>Ative a segunda aba lateral e escolha a vestimenta para esta ocasião.</p>
+                        </div>
+                        <div class="vestimenta-ui">
+                            <div class="vestuario-masculino">
+                                <h4 class="title">Vestuário masculino</h4>
+                                <button data-roupa="1" class="roupa-select btn-roupa-1">
+                                </button>
+                                <button data-roupa="2" class="roupa-select btn-roupa-2">
+                                </button>
+                                <button data-roupa="3" class="roupa-select btn-roupa-3">
+                                </button>
+                                <button data-roupa="4" class="roupa-select btn-roupa-4">
+                                </button>
+                            </div>
+                            <div class="vestuario-feminino">
+                                <h4 class="title">Vestuário feminino</h4>
+                                <button data-roupa="1" class="roupa-select btn-roupa-1">
+                                </button>
+                                <button data-roupa="2" class="roupa-select btn-roupa-2">
+                                </button>
+                                <button data-roupa="3" class="roupa-select btn-roupa-3">
+                                </button>
+                                <button data-roupa="4" class="roupa-select btn-roupa-4">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-dicas"></button>
+                    <div class="backdrop">
+                        <img src="assets/img/seta_tutorial.png" class="seta-tutorial">
+                        <div class="msg">
+                            <p>Se você estiver indeciso, utilize o botão "DICA" para receber algumas instruções.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tela tela-5">
+            <div class="ui-tsc">
+                <div class="titulo-cena">
+                    <p>Reunião</p>
+                </div>
+                <div class="cena-ui">
+                    <div class="personagem-container">
+                        <div class="img-feminino">
+                            <img src="assets/img/ilustra/novas/nova_02c.png" data-roupa="5" class="roupa-5 correto">
+                            <img src="assets/img/ilustra/novas/nova_01c.png" data-roupa="6" class="roupa-6">
+                            <img src="assets/img/ilustra/novas/nova_04c.png" data-roupa="7" class="roupa-7">
+                            <img src="assets/img/ilustra/novas/nova_05c.png" data-roupa="8" class="roupa-8">
+                        </div>
+                        <div class="img-masculino">
+                            <img src="assets/img/ilustra/novas/nova_09c.png" data-roupa="5" class="roupa-5 correto">
+                            <img src="assets/img/ilustra/Homem_Reuniao_Roupa04.png" data-roupa="6" class="roupa-6">
+                            <img src="assets/img/ilustra/Homem_Reuniao_Roupa03.png" data-roupa="7" class="roupa-7">
+                            <img src="assets/img/ilustra/novas/nova_10c.png" data-roupa="8" class="roupa-8">
+                        </div>
+                    </div>
+                    <div class="dialog">
+                        <div class="seletor-aba">
+                            <button class="aba-info ativo"></button>
+                            <button class="aba-roupas"></button>
+                        </div>
+                        <div class="msg">
+                            <h4 class="title">Situação</h4>
+                            <p>Você participa de uma reunião interna com a equipe e o gerente, quinzenalmente. O
+                                ambiente é mais informal, mas ainda assim é importante manter uma aparência
+                                profissional. </p>
+                            <p>Ative a segunda aba lateral e escolha a vestimenta para esta ocasião.</p>
+                        </div>
+                        <div class="vestimenta-ui">
+                            <div class="vestuario-masculino">
+                                <h4 class="title">Vestuário masculino</h4>
+                                <button data-roupa="6" class="roupa-select btn-roupa-6">
+                                </button>
+                                <button data-roupa="5" class="roupa-select btn-roupa-5">
+                                </button>
+                                <button data-roupa="8" class="roupa-select btn-roupa-8">
+                                </button>
+                                <button data-roupa="7" class="roupa-select btn-roupa-7">
+                                </button>
+                            </div>
+                            <div class="vestuario-feminino">
+                                <h4 class="title">Vestuário feminino</h4>
+                                <button data-roupa="6" class="roupa-select btn-roupa-6">
+                                </button>
+                                <button data-roupa="5" class="roupa-select btn-roupa-5">
+                                </button>
+                                <button data-roupa="8" class="roupa-select btn-roupa-8">
+                                </button>
+                                <button data-roupa="7" class="roupa-select btn-roupa-7">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-dicas" data-bs-toggle="modal" data-bs-target="#modal-dicas-2"></button>
+                </div>
+            </div>
+        </div>
+        <div class="tela tela-6">
+            <div class="ui-tsc">
+                <div class="titulo-cena">
+                    <p>Palestra</p>
+                </div>
+                <div class="cena-ui">
+                    <img src="assets/img/Marketing_Pessoal_Palestra_Plateia.png" alt="" class="ilustra-plateia">
+                    <div class="personagem-container">
+                        <div class="img-feminino">
+                            <img src="assets/img/ilustra/Mulher_Palestra_Roupa01.png" data-roupa="9"
+                                class="roupa-9 correto">
+                            <img src="assets/img/ilustra/Mulher_Palestra_Roupa02.png" data-roupa="10" class="roupa-10">
+                            <img src="assets/img/ilustra/Mulher_Palestra_Roupa03.png" data-roupa="11" class="roupa-11">
+                            <img src="assets/img/ilustra/Mulher_Palestra_Roupa04.png" data-roupa="12" class="roupa-12">
+                        </div>
+                        <div class="img-masculino">
+                            <img src="assets/img/ilustra/novas/nova_06b.png" data-roupa="9" class="roupa-9 correto">
+                            <img src="assets/img/ilustra/Homem_Palestra_Roupa02.png" data-roupa="10" class="roupa-10">
+                            <img src="assets/img/ilustra/Homem_Palestra_Roupa03.png" data-roupa="11" class="roupa-11">
+                            <img src="assets/img/ilustra/novas/nova_08b.png" data-roupa="12" class="roupa-12">
+                        </div>
+                    </div>
+                    <div class="dialog">
+                        <div class="seletor-aba">
+                            <button class="aba-info ativo"></button>
+                            <button class="aba-roupas"></button>
+                        </div>
+                        <div class="msg">
+                            <h4 class="title">Situação</h4>
+                            <p>Você fará uma apresentação importante para clientes em potencial. É fundamental
+                                causar
+                                uma ótima impressão e demonstrar conhecimento e expertise na sua área.</p>
+                            <p>Ative a segunda aba lateral e escolha a vestimenta para esta ocasião.</p>
+                        </div>
+                        <div class="vestimenta-ui">
+                            <div class="vestuario-masculino">
+                                <h4 class="title">Vestuário masculino</h4>
+                                <button data-roupa="10" class="roupa-select btn-roupa-10">
+                                </button>
+                                <button data-roupa="11" class="roupa-select btn-roupa-11">
+                                </button>
+                                <button data-roupa="9" class="roupa-select btn-roupa-9">
+                                </button>
+                                <button data-roupa="12" class="roupa-select btn-roupa-12">
+                                </button>
+                            </div>
+                            <div class="vestuario-feminino">
+                                <h4 class="title">Vestuário feminino</h4>
+                                <button data-roupa="10" class="roupa-select btn-roupa-10">
+                                </button>
+                                <button data-roupa="11" class="roupa-select btn-roupa-11">
+                                </button>
+                                <button data-roupa="9" class="roupa-select btn-roupa-9">
+                                </button>
+                                <button data-roupa="12" class="roupa-select btn-roupa-12">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-dicas" data-bs-toggle="modal" data-bs-target="#modal-dicas-3"></button>
+                </div>
+            </div>
+        </div>
+        <div class="tela tela-7">
+            <div class="ui-tsc">
+                <div class="titulo-cena">
+                    <p>Sexta casual</p>
+                </div>
+                <div class="cena-ui">
+                    <div class="personagem-container">
+                        <div class="img-feminino">
+                            <img src="assets/img/ilustra/novas/nova_04b.png" data-roupa="13" class="roupa-13 correto">
+                            <img src="assets/img/ilustra/novas/nova_05b.png" data-roupa="14" class="roupa-14">
+                            <img src="assets/img/ilustra/novas/nova_01b.png" data-roupa="15" class="roupa-15">
+                            <img src="assets/img/ilustra/Mulher_SextaCasual_Roupa04.png" data-roupa="16"
+                                class="roupa-16">
+                        </div>
+                        <div class="img-masculino">
+                            <img src="assets/img/ilustra/Homem_SextaCasual_Roupa01.png" data-roupa="13"
+                                class="roupa-13 correto">
+                            <img src="assets/img/ilustra/Homem_SextaCasual_Roupa02.png" data-roupa="14"
+                                class="roupa-14">
+                            <img src="assets/img/ilustra/Homem_SextaCasual_Roupa03.png" data-roupa="15"
+                                class="roupa-15">
+                            <img src="assets/img/ilustra/Homem_SextaCasual_Roupa04.png" data-roupa="16"
+                                class="roupa-16">
+                        </div>
+                    </div>
+                    <div class="dialog">
+                        <div class="seletor-aba">
+                            <button class="aba-info ativo"></button>
+                            <button class="aba-roupas"></button>
+                        </div>
+                        <div class="msg">
+                            <h4 class="title">Situação</h4>
+                            <p>Na sua empresa, as sextas-feiras são consideradas "casual day", o que significa que
+                                você
+                                pode se vestir com roupas mais descontraídas. No entanto, ainda é importante manter
+                                uma
+                                aparência profissional e apresentável. </p>
+                            <p>Ative a segunda aba lateral e escolha a vestimenta para esta ocasião.</p>
+                        </div>
+                        <div class="vestimenta-ui">
+                            <div class="vestuario-masculino">
+                                <h4 class="title">Vestuário masculino</h4>
+                                <button data-roupa="16" class="roupa-select btn-roupa-16">
+                                </button>
+                                <button data-roupa="15" class="roupa-select btn-roupa-15">
+                                </button>
+                                <button data-roupa="14" class="roupa-select btn-roupa-14">
+                                </button>
+                                <button data-roupa="13" class="roupa-select btn-roupa-13">
+                                </button>
+                            </div>
+                            <div class="vestuario-feminino">
+                                <h4 class="title">Vestuário feminino</h4>
+                                <button data-roupa="16" class="roupa-select btn-roupa-16">
+                                </button>
+                                <button data-roupa="15" class="roupa-select btn-roupa-15">
+                                </button>
+                                <button data-roupa="14" class="roupa-select btn-roupa-14">
+                                </button>
+                                <button data-roupa="13" class="roupa-select btn-roupa-13">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-dicas" data-bs-toggle="modal" data-bs-target="#modal-dicas-4"></button>
+                </div>
+            </div>
+        </div>
+        <div class="tela tela-final">
+            <div class="dialog">
+                <p class="msg">
+                    Excelente! Com essas dicas, você estará pronta(o) para montar looks impecáveis para qualquer
+                    ocasião
+                    no seu dia a dia como técnico em secretariado. Vista-se com estilo, profissionalismo e
+                    confiança,
+                    construindo intencionalmente sua marca pessoal!
+                </p>
+                <button class="restart-btn">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modais feedback -->
+    <div class="modal fade" id="modal-positivo" tabindex="-1" aria-labelledby="modal-positivo-1-Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-positivo-1-Label">Uau!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Parabéns! Resposta correta. A opção selecionada é a escolha mais adequada para esta situação.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-negativo" tabindex="-1" aria-labelledby="modal-negativo-Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-negativo-Label">Hmm...</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ops! Talvez essa não seja a escolha mais adequada pra esse contexto. Lembre-se de ler a descrição
+                        da situação para escolher a roupa mais adequada!</p>
+                    <p>Tente novamente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas dicas-tutorial" id="modal-dicas-masc-1" tabindex="-1"
+        aria-labelledby="modal-dicas-Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Certifique-se de que as roupas estejam bem passadas e em bom estado.</p>
+                    <p class="check">Mantenha o cabelo e a barba arrumados.</p>
+                    <p class="check">Utilize um perfume discreto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas dicas-tutorial" id="modal-dicas-fem-1" tabindex="-1"
+        aria-labelledby="modal-dicas-Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Certifique-se de que as roupas estejam bem passadas e em bom estado.</p>
+                    <p class="check">Mantenha o cabelo e a maquiagem arrumados.</p>
+                    <p class="check">Utilize acessórios, como brincos e colares discretos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas" id="modal-dicas-masc-2" tabindex="-1" aria-labelledby="modal-dicas-Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Você pode usar uma jaqueta blazer por cima da camisa para um visual mais formal.
+                    </p>
+                    <p class="check">As mangas da camisa podem ser dobradas até o cotovelo para um visual mais
+                        descontraído.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas" id="modal-dicas-fem-2" tabindex="-1" aria-labelledby="modal-dicas-Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Você pode usar uma jaqueta blazer por cima da blusa para um visual mais formal.
+                    </p>
+                    <p class="check">Prenda o cabelo se estiver muito longo. </p>
+                    <p class="check">Evite usar roupas muito decotadas ou justas. </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas" id="modal-dicas-masc-3" tabindex="-1" aria-labelledby="modal-dicas-Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Certifique-se de que o terno esteja bem ajustado ao seu corpo.</p>
+                    <p class="check">Use uma gravata de seda ou cetim.</p>
+                    <p class="check">Mantenha a postura ereta e confiante.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas" id="modal-dicas-fem-3" tabindex="-1" aria-labelledby="modal-dicas-Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Certifique-se de que o terno esteja bem ajustado ao seu corpo.</p>
+                    <p class="check">Use um lenço liso e discreto.</p>
+                    <p class="check">Mantenha a postura ereta e confiante.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas" id="modal-dicas-masc-4" tabindex="-1" aria-labelledby="modal-dicas-Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Opte por uma camisa polo de boa qualidade e em bom estado. ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-dicas" id="modal-dicas-fem-4" tabindex="-1" aria-labelledby="modal-dicas-Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-dicas-Label">Dicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="check">Opte por uma calça jeans em bom estado e sem rasgos.</p>
+                    <p class="check">A blusa pode ser de qualquer cor ou estampa, mas evite algo muito decotado ou
+                        transparente. </p>
+                    <p class="check">Você pode usar um blazer ou jaqueta por cima da blusa para um visual mais formal.
+                    </p>
+                    <p class="check">Acessórios como colares, pulseiras e brincos podem dar um toque final ao visual.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
