@@ -143,7 +143,7 @@
                     </div>
                     <img src="img/destaque.jpg" class="img-fluid d-none d-lg-block mx-auto my-5 no-print shadow radius" aria-hidden="true">
                     <img src="img/destaque_mobile.jpg" class="img-fluid d-block d-lg-none mx-auto my-5 no-print shadow radius" aria-hidden="true">
-                    <div class="sr-only only-print destaque">
+                    <div class="sr-only print destaque">
                         <p>E você, como organiza sua agenda?</p>
                     </div>
                     <p>Além da agenda dos gestores, você também deve ter extremo cuidado com a organização da sua agenda, pois suas atividades poderão impactar alguma demanda da pessoa que você assessora. Além disso, também é fundamental manter a organização para que as atividades fluam de forma mais harmônica durante o dia. </p>
@@ -173,7 +173,7 @@
                     <p>As suas anotações estão assim:</p>
                     <img src="img/anotacoes.png" class="img-fluid d-none d-lg-block mx-auto my-5 no-print" aria-hidden="true">
                     <img src="img/anotacoes_mobile.png" class="img-fluid d-block d-lg-none mx-auto my-5 no-print" aria-hidden="true">
-                    <div class="sr-only only-print destaque">
+                    <div class="sr-only print destaque">
                         <ul>
                             <li>Providenciar orçamentos de locação de salas para a reunião de conselho que ocorrerá daqui 45 dias </li>
                             <li>Participar da reunião da diretoria às 9h15 </li>
@@ -188,12 +188,11 @@
                     </div>
                     <p>Além das demandas listadas, você precisa fazer seu horário de almoço, que é das 12h às 13h15.  </p>
                     <p>Então, como você organizaria sua agenda dentro dos horários? </p>
-                    <p>Observe a seguinte agenda e os compromissos listados e arraste para o horário que você acredita ser o mais adequado para cada demanda. </p>
                     
-                    <div class="box-atividade">
-                        <p class="titulo-ativ"><strong>Relacionar colunas</strong></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas turpis nisl, tristique et dui ac, convallis ullamcorper arcu. Ut finibus, elit eget ornare pharetra, dolor erat finibus nulla, nec efficitur sem nisi at nulla. Phasellus non pharetra tortor. Proin dictum ultrices ligula in finibus. Suspendisse id sem consectetur, venenatis ex vel, consectetur arcu. Cras vulputate quam in ultrices ornare. Donec gravida pharetra odio et ultrices.</p>
-                        <div class="game-associar-colunas no-print nao-imprimir">
+                    
+                    <div class="box-atividade no-print">
+                        <p class="titulo-ativ"><strong>Observe a seguinte agenda e os compromissos listados e arraste para o horário que você acredita ser o mais adequado para cada demanda. </strong></p>
+                        <div class="game-associar-colunas nao-imprimir">
                             <div class="row">
                                 <div class="col-12 col-sm-4 flexs itens">
                                     <button data-resp="1" class="item item1">
@@ -327,34 +326,7 @@
                             </div>
                     
                         </div>
-                        <!-- Versão para impressão -->
-                        <div class="print-only only-print">
-                            <p>Associe a primeira coluna com a segunda.</p>
-                            <table class="associe-colunas">
-                                <tr>
-                                    <td>
-                                        <p>A) GERMÂNIO</p>
-                                        <p>B) TUNGSTÊNIO</p>
-                                        <p>C) LÍTIO</p>
-                                        <p>D) SÓDIO</p>
-                                        <p>E) POTÁSSIO</p>
-                                        <p>F) CÁLCIO</p>
-                                        <p>G) CLORO</p>
-                                        <p>H) CARBONO</p>
-                                    </td>
-                                    <td>
-                                        <p>(&nbsp;&nbsp;) FRUTAS E VEGETAIS</p>
-                                        <p>(&nbsp;&nbsp;) CONCHAS E OSSOS</p>
-                                        <p>(&nbsp;&nbsp;) PISCINAS</p>
-                                        <p>(&nbsp;&nbsp;) SEMICONDUTORES ELETRÔNICOS</p>
-                                        <p>(&nbsp;&nbsp;) BASE DAS MOLÉCULAS DA VIDA</p>
-                                        <p>(&nbsp;&nbsp;) SAL</p>
-                                        <p>(&nbsp;&nbsp;) FILAMENTO DE LÂMPADAS</p>
-                                        <p>(&nbsp;&nbsp;) BATERIAS</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
+
                     </div>
 
                     <h3>Controle de espaço</h3>
@@ -362,7 +334,8 @@
                     <p>A atuação do profissional de secretariado é muito relacionada com a organização, por isso, quando há poucas salas de reuniões em uma empresa, o profissional de secretariado pode ficar responsável pelo controle do agendamento desses espaços. Nesse caso, pode usar uma planilha para fazer esses registros. Contudo, é importante observar que existem sistemas de agendamento, nos quais o responsável pela reunião faz diretamente o registro no sistema e o profissional de secretariado não precisa ficar com essa responsabilidade. </p>
                     <p>Agora, no processo de controle da agenda e dos contatos, você deve considerar o uso do espaço para registrar as informações. Observe as duas situações:</p>
                     <p class="no-print" aria-hidden="true">Clique ou toque para ampliar.</p>
-                    <a href="img/agendas.png" target="_blank"><img src="img/agendas.png" class="mx-auto my-5 d-block img-fluid"></a>
+                    <a href="img/agendas.png" target="_blank" class="no-print"><img src="img/agendas.png" class="mx-auto my-5 d-block img-fluid"></a>
+                    <img src="img/agendas.png" class="mx-auto my-5 d-block img-fluid only-print" aria-hidden="true">
                     <div class="sr-only no-print">
                         <p><b>Agenda 1</b></p>
                         <p><b>22 (segunda-feira)</b></p>
@@ -425,7 +398,7 @@
                             <span class="sr-only">Agenda física</span>
                         </button>
                         <button type="button" class="bt-virtual" data-bs-toggle="modal" data-bs-target="#modal-virtual">
-                            <span class="sr-only">Agenda física</span>
+                            <span class="sr-only">Agenda virtual</span>
                         </button>
                     </div>
 
@@ -513,15 +486,16 @@
                     <div class="d-flex align-items-center flex-wrap flex-lg-nowrap">
                         <figure>
                             <div class="figure-img">
-                                <img class="m-3 radius shadow no-print img2" src="img/img2_texto_mobile.jpg" aria-hidden="true">
+                                <img class="m-3 radius shadow no-print img2" src="img/img3_texto.jpg" aria-hidden="true">
                             </div>
                         </figure>
                         <div>
                             <p>As novas tecnologias emergem para auxiliar na atualização e na organização de agenda e contatos. Antigamente, utilizava-se a agenda física de contatos (muitos ainda a utilizam), por exemplo. Hoje em dia, prioriza-se o registro virtual para acelerar e manter as informações mais seguras.</p>
                             <p>Ao manter apenas o registro escrito dos contatos, corre-se o risco de algum imprevisto acontecer (por exemplo, os contatos serem perdidos). Com as novas tecnologias, é possível salvar os registros “na nuvem”, ou seja, em discos rígidos (os conhecidos HDs) localizados para além dos HDs pessoais, maximizando o armazenamento de informações.</p>
-                            <p>Por fim, como exemplo de ferramenta da informação que surge para auxiliar os profissionais no registro eficiente e compartilhado das informações, tem-se o Trello.</p>
                         </div>
                     </div>
+                    <p>O importante é considerar as opções e selecionar aquela que for mais adequada a cada ambiente de trabalho. Isso não significa que agendas físicas estão obsoletas e não devem ser utilizadas. Ao contrário, elas representam uma ferramenta importante que ainda é muito utilizada pelos profissionais. O ideal é avaliar cada situação e encontrar as estratégias mais produtivas para conduzir as atividades.</p>
+                    <p>Por fim, como exemplo de ferramenta da informação que surge para auxiliar os profissionais no registro eficiente e compartilhado das informações, tem-se o Trello.</p>
                     <figure class="my-5">
                         <div class="figure-img">
                             <img class="img-fluid d-block mx-auto mb-4 shadow radius" src="img/trelo.jpg">
