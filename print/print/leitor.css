@@ -705,3 +705,7 @@ iframe, iframe.youtube-pl{
 .modal-header button{
   display: none;
 }
+
+.citacao{
+  padding-left: 100px !important;
+}

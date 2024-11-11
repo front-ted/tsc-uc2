@@ -294,4 +294,8 @@
 
   .splide__pagination{display: none !important;}
   .splide__list li{list-style: none !important;}
+
+  .citacao{
+    padding-left: 100px !important;
+  }
 }

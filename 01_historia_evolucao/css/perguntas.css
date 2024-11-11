@@ -92,9 +92,9 @@
     border-width: 3px;
     border-style: solid;
 }
-.f-positivo i, .f-negativo i{
+.f-positivo i.fas, .f-negativo i.fas{
     font-size: 40px;
     margin-right: 10px;
 }
-.f-positivo i{color: #28afb2;}
-.f-negativo i{color: #cd6667;}
+.f-positivo i.fas{color: #28afb2;}
+.f-negativo i.fas{color: #cd6667;}
