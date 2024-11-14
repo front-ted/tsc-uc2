@@ -68,4 +68,96 @@ body {
     left: -20px;
 }
 
+.painel-materiais .botoes{
+    width: 893px;
+    height: 405px;
+    margin: 30px auto;
+    padding-top: 405px;
+    position: relative;
+}
+.painel-materiais button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    transition: all .4s;
+}
+.painel-materiais button:hover{
+    transform: scale(1.1);
+}
+
+.painel-materiais .bt1{
+    width: 337px;
+    height: 340px;
+    background: url('../img/painel1.png');
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.painel-materiais .bt2{
+    width: 313px;
+    height: 303px;
+    background: url('../img/painel2.png');
+    z-index: 2;
+    top: 0;
+    right: 0;
+}
+.painel-materiais .bt3{
+    width: 178px;
+    height: 263px;
+    background: url('../img/painel3.png');
+    z-index: 3;
+    top: 45px;
+    left: 275px;
+}
+.painel-materiais .bt4{
+    width: 164px;
+    height: 225px;
+    background: url('../img/painel4.png');
+    z-index: 3;
+    top: 65px;
+    right: 195px;
+}
+.painel-materiais .bt5{
+    width: 131px;
+    height: 213px;
+    background: url('../img/painel5.png');
+    z-index: 3;
+    top: 80px;
+    right: 320px;
+}
+.painel-materiais .bt6{
+    width: 202px;
+    height: 95px;
+    background: url('../img/painel6.png');
+    z-index: 3;
+    bottom: 45px;
+    left: 90px;
+}
+.painel-materiais .bt7{
+    width: 255px;
+    height: 154px;
+    background: url('../img/painel7.png');
+    z-index: 3;
+    bottom: 25px;
+    right: 40px;
+}
+.painel-materiais .bt8{
+    width: 125px;
+    height: 139px;
+    background: url('../img/painel8.png');
+    z-index: 3;
+    bottom: 45px;
+    left:0;
+    right:0;
+    margin: auto;
+}
+.painel-materiais .aba{
+    background: #fff;
+    border-radius: 30px;
+    border: 3px solid #92ACCE;
+    padding: 50px;
+    padding-top: 100px;
+    margin-top: -200px;
+}
+
 @media (max-width: 580px) {}

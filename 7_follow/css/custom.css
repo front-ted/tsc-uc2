@@ -70,13 +70,13 @@ body {
 }
 
 .prancheta {
-    background: url(../img/lista_bg.png) no-repeat center;
     margin-top: 30px;
     margin-bottom: 150px;
-    width: 575px;
-    height: 835px;
-    padding: 100px;
+    max-width: 575px;
+    padding: 50px;
     position: relative;
+    background: #fff;
+    padding-bottom: 150px;
 }
 
 .elemento {
@@ -84,8 +84,10 @@ body {
     width: 220px;
     height: 223px;
     position: absolute;
-    top: 925px;
-    right: 40%;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 .painel1 {
@@ -114,28 +116,6 @@ body {
 }
 
 @media (max-width: 767px) {
-    .prancheta {
-        background: url(../img/lista_bg_mobile.png) no-repeat center;
-        margin-top: 20px;
-        margin-bottom: 60px;
-        width: 400px;
-        height: 800px;
-        padding-left: 20px;
-        padding-top: 90px;
-        padding-right: 80px;
-        padding-bottom: 0;
-        position: relative;
-    }
-
-    .elemento {
-        background: url(../img/lista_elemento.png) no-repeat center;
-        width: 220px;
-        height: 223px;
-        position: absolute;
-        top: 950px;
-        right: 23%;
-        scale: 0.7;
-    }
 
     .marcador1 li {
         margin-top: 5px;

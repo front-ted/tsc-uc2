@@ -48,7 +48,12 @@ body{
     transition: all .4s;
 }
 
-
+@media (max-width: 780px){
+    body{
+        background: url('../img/bg_mobile_tablet.jpg') no-repeat;
+        background-attachment: fixed;
+    }
+}
 
 @media (max-width: 580px){
     .bt-saibamais,

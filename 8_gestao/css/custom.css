@@ -90,6 +90,7 @@
     background: url(../img/painel2.png) no-repeat center;
     width: 377px;
     height: 600px;
+    background-size: contain;
 }
 
 .bt-painel2 {
@@ -105,10 +106,17 @@
     height: 156px;
     background: url(../img/hover.png) no-repeat;
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: -35px;
+    left: -30px;
 }
-
+.bt3-painel2:hover::before{
+    top: -60px;
+    left: -40px;
+}
+.bt5-painel2:hover::before{
+    top: 45px;
+    left: -60px;
+}
 .bt1-painel2 {
     background: url(../img/painel2_bt1.png) no-repeat center;
     height: 161px;
@@ -166,6 +174,7 @@
 
 .bt1-painel3 {
     background: url(../img/esquema1.png) no-repeat center;
+    background-size: contain;
 }
 
 .bt1-painel3:hover {
@@ -239,4 +248,7 @@
         margin-bottom: -100px;
         scale: 0.6;
     }
+}
+@media (max-width: 580px) {
+    .bt1-painel3 {height: 120px;}
 }
