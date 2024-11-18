@@ -9,8 +9,8 @@ body{
 /*FLIP CARDS*/
 .flip-card {
     background-color: transparent;
-    width: 234px;
-    height: 423px;
+    width: 175px;
+    height: 316px;
     perspective: 1000px;
     cursor: pointer;
     margin: 20px;
