@@ -95,7 +95,7 @@
     font-size: 18pt;    
   }
   h6, h6.visually-hidden{
-    font-size: 18pt;    
+    font-size: 16pt;    
   }
   *{
     font-family: 'Libre Franklin Regular' !important
@@ -168,6 +168,9 @@
   }
   .accordion-item{
     page-break-inside: avoid;
+  }
+  .accordion h2 {
+    font-size: 18pt;
   }
 
   /*carousel*/
