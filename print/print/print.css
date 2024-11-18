@@ -169,7 +169,7 @@
   .accordion-item{
     page-break-inside: avoid;
   }
-  .accordion h2 {
+  .accordion-button, .modal-title {
     font-size: 18pt !important;
   }
 
