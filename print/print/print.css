@@ -92,7 +92,7 @@
     font-size: 18pt;   
   }
   h5, h5.visually-hidden{
-    font-size: 18pt !important;    
+    font-size: 16pt !important;    
   }
   h6, h6.visually-hidden{
     font-size: 16pt;    
@@ -170,7 +170,7 @@
     page-break-inside: avoid;
   }
   .accordion-button, .modal-title {
-    font-size: 18pt !important;
+    font-size: 16pt !important;
   }
 
   /*carousel*/
